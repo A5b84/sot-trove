@@ -7,8 +7,9 @@ import type { WikiNode, WikiTemplateNode, WikiTemplateNodeParameter } from '../w
 import { forEachTemplate, normalizeCase } from '../wikitext/util';
 import { WikitextParser } from '../wikitext/WikitextParser';
 
+import type { Treasure } from 'common';
 import { fetchAllCategoryMembers } from '../wiki';
-import type { ITreasureProvider, Treasure } from './ITreasureProvider';
+import type { ITreasureProvider } from './ITreasureProvider';
 
 /**
  * Treasure provider that gets its information from `{{treasure}}` templates in pages' sources.

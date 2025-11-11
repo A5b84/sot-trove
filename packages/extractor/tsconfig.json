@@ -6,4 +6,9 @@
         ],
     },
     "extends": "../../tsconfig.json",
+    "references": [
+        {
+            "path": "../common/tsconfig.json",
+        },
+    ],
 }

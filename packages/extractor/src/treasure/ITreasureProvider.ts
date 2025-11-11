@@ -1,10 +1,4 @@
-export type Treasure = {
-    name: string;
-    url: string;
-    minGoldReward?: number;
-    maxGoldReward?: number;
-    doubloonReward?: number;
-};
+import type { Treasure } from 'common';
 
 export interface ITreasureProvider {
     getTreasures(): Promise<Treasure[]>;

@@ -1,6 +1,7 @@
+import type { Treasure } from 'common';
 import { getOrComputeCachedValue } from '../cache';
 import { getAllRowsOfCargoTable } from '../cargo';
-import type { ITreasureProvider, Treasure } from './ITreasureProvider';
+import type { ITreasureProvider } from './ITreasureProvider';
 
 /**
  * Treasure provider that gets its information using [Cargo](https://support.wiki.gg/wiki/Cargo).
