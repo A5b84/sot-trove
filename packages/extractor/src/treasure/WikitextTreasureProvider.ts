@@ -1,20 +1,37 @@
-import type { Page } from './wiki';
-import { tokenizeWikitext } from './wikitext/tokenizeWikitext';
-import type { WikiNode, WikiTemplateNode, WikiTemplateNodeParameter } from './wikitext/types';
-import { forEachTemplate, normalizeCase } from './wikitext/util';
-import { WikitextParser } from './wikitext/WikitextParser';
+import { getOrComputeCachedValue } from '../cache';
+import { LOCALE } from '../util';
 
-export type Treasure = {
-    name: string;
-    url: string;
-    minGoldReward?: number;
-    maxGoldReward?: number;
-    doubloonReward?: number;
-};
+import type { Page } from '../wiki';
+import { tokenizeWikitext } from '../wikitext/tokenizeWikitext';
+import type { WikiNode, WikiTemplateNode, WikiTemplateNodeParameter } from '../wikitext/types';
+import { forEachTemplate, normalizeCase } from '../wikitext/util';
+import { WikitextParser } from '../wikitext/WikitextParser';
+
+import { fetchAllCategoryMembers } from '../wiki';
+import type { ITreasureProvider, Treasure } from './ITreasureProvider';
+
+/**
+ * Treasure provider that gets its information from `{{treasure}}` templates in pages' sources.
+ */
+export class WikitextTreasureProvider implements ITreasureProvider {
+    async getTreasures(): Promise<Treasure[]> {
+        const pages = await getOrComputeCachedValue('pages.json', () => fetchAllCategoryMembers('Treasure'));
+        const treasures: Treasure[] = [];
+
+        for (const page of pages) {
+            for (const treasure of extractTreasures(page)) {
+                treasures.push(treasure);
+            }
+        }
+
+        treasures.sort((t1, t2) => t1.name.localeCompare(t2.name, LOCALE));
+        return treasures;
+    }
+}
 
 const NORMALIZED_TREASURE_TEMPLATE_NAME = normalizeCase('Treasure');
 
-export function extractTreasures(page: Page): Treasure[] {
+function extractTreasures(page: Page): Treasure[] {
     const tokens = tokenizeWikitext(page.content);
     const nodes = new WikitextParser(tokens).parse();
     const treasures: Treasure[] = [];
@@ -28,7 +45,7 @@ export function extractTreasures(page: Page): Treasure[] {
     return treasures;
 }
 
-export function extractTreasureFromTemplate(node: WikiTemplateNode, page: Page): Treasure {
+function extractTreasureFromTemplate(node: WikiTemplateNode, page: Page): Treasure {
     let name = page.title;
     let minGoldReward: number | undefined;
     let maxGoldReward: number | undefined;

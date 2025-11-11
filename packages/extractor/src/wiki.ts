@@ -1,3 +1,5 @@
+import { checkResponseOk } from './util';
+
 const PAGE_SIZE = 50; // See rvlimit on https://www.mediawiki.org/w/api.php?action=help&modules=query%2Brevisions
 
 export type Page = {
@@ -80,13 +82,6 @@ async function fetchPartialCategoryMembers(category: string, continueFrom?: stri
 
     const url = 'https://seaofthieves.wiki.gg/api.php?' + params;
     const response = await fetch(url);
-
-    if (!response.ok) {
-        const body = await response.text();
-        throw new Error(
-            `Failed to fetch ${url}: ${response.status} ${response.statusText}\n` + 'Response body:\n' + body
-        );
-    }
-
+    checkResponseOk(response);
     return (await response.json()) as ApiResult;
 }
