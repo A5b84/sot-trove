@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug extractor",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "pnpm",
+            "runtimeArgs": [
+                "--dir",
+                "packages/extractor",
+                "exec",
+                "tsx",
+                "src/index.ts"
+            ],
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "<node_internals>/**",
+                "packages/*/node_modules/**"
+            ]
+        }
+    ]
+}

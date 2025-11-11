@@ -1,0 +1,24 @@
+{
+    // https://www.typescriptlang.org/tsconfig/
+    "compilerOptions": {
+        // Type Checking
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "strict": true,
+        // Modules
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "noUncheckedSideEffectImports": true,
+        // Language and Environment
+        "lib": [
+            "ES2024"
+        ],
+        "moduleDetection": "force",
+        "target": "es2024",
+        // Interop Constraints
+        "erasableSyntaxOnly": true,
+        "verbatimModuleSyntax": true,
+        // Completeness
+        "skipLibCheck": true,
+    },
+}

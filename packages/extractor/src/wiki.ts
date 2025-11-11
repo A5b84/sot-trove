@@ -1,0 +1,90 @@
+const PAGE_SIZE = 50; // See rvlimit on https://www.mediawiki.org/w/api.php?action=help&modules=query%2Brevisions
+
+export type Page = {
+    id: number;
+    title: string;
+    content: string;
+};
+
+export async function fetchAllCategoryMembers(category: string): Promise<Page[]> {
+    const pages: Page[] = [];
+    let currentBatch = 1;
+    let continueFrom: string | undefined;
+    console.log(`Retrieving pages from category ${category}`);
+
+    do {
+        console.log(`Batch ${currentBatch} (${pages.length} pages so far)...`);
+
+        const results = await fetchPartialCategoryMembers(category, continueFrom);
+        continueFrom = results.continue?.gcmcontinue;
+
+        for (const page of Object.values(results.query.pages)) {
+            pages.push({
+                id: page.pageid,
+                title: page.title,
+                content: page.revisions[0].slots['main']['*'],
+            });
+        }
+
+        currentBatch++;
+    } while (continueFrom);
+
+    console.log(`Retrieved ${pages.length} pages from category ${category}`);
+    return pages;
+}
+
+type ApiResult = {
+    continue?: {
+        gcmcontinue: string;
+    };
+    query: {
+        pages: Record<
+            string,
+            {
+                pageid: number;
+                title: string;
+                revisions: {
+                    slots: {
+                        main: {
+                            '*': string;
+                        };
+                    };
+                }[];
+            }
+        >;
+    };
+};
+
+async function fetchPartialCategoryMembers(category: string, continueFrom?: string): Promise<ApiResult> {
+    // https://www.mediawiki.org/wiki/API:Action_API
+    // https://www.mediawiki.org/w/api.php?action=help&modules=query
+    // https://www.mediawiki.org/w/api.php?action=help&modules=query%2Brevisions
+    // https://www.mediawiki.org/w/api.php?action=help&modules=query%2Bcategorymembers
+    const params = new URLSearchParams({
+        action: 'query',
+        format: 'json',
+        prop: 'revisions',
+        rvprop: 'content',
+        rvslots: 'main',
+        generator: 'categorymembers',
+        gcmtitle: `Category:${category}`,
+        gcmnamespace: '0',
+        gcmlimit: PAGE_SIZE.toString(),
+    });
+
+    if (continueFrom) {
+        params.set('gcmcontinue', continueFrom);
+    }
+
+    const url = 'https://seaofthieves.wiki.gg/api.php?' + params;
+    const response = await fetch(url);
+
+    if (!response.ok) {
+        const body = await response.text();
+        throw new Error(
+            `Failed to fetch ${url}: ${response.status} ${response.statusText}\n` + 'Response body:\n' + body
+        );
+    }
+
+    return (await response.json()) as ApiResult;
+}
