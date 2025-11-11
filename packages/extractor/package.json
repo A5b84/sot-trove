@@ -5,7 +5,8 @@
     "type": "module",
     "main": "src/index.ts",
     "scripts": {
-        "test": "vitest"
+        "test": "vitest",
+        "update-data": "tsx src/index.ts --refresh-cache"
     },
     "engines": {
         "node": ">=24"

@@ -1,8 +1,8 @@
 const PAGE_SIZE = 50; // See rvlimit on https://www.mediawiki.org/w/api.php?action=help&modules=query%2Brevisions
 
 export type Page = {
-    id: number;
     title: string;
+    url: string;
     content: string;
 };
 
@@ -20,8 +20,8 @@ export async function fetchAllCategoryMembers(category: string): Promise<Page[]>
 
         for (const page of Object.values(results.query.pages)) {
             pages.push({
-                id: page.pageid,
                 title: page.title,
+                url: page.canonicalurl,
                 content: page.revisions[0].slots['main']['*'],
             });
         }
@@ -41,8 +41,8 @@ type ApiResult = {
         pages: Record<
             string,
             {
-                pageid: number;
                 title: string;
+                canonicalurl: string;
                 revisions: {
                     slots: {
                         main: {
@@ -58,12 +58,14 @@ type ApiResult = {
 async function fetchPartialCategoryMembers(category: string, continueFrom?: string): Promise<ApiResult> {
     // https://www.mediawiki.org/wiki/API:Action_API
     // https://www.mediawiki.org/w/api.php?action=help&modules=query
+    // https://www.mediawiki.org/w/api.php?action=help&modules=query%2Binfo
     // https://www.mediawiki.org/w/api.php?action=help&modules=query%2Brevisions
     // https://www.mediawiki.org/w/api.php?action=help&modules=query%2Bcategorymembers
     const params = new URLSearchParams({
         action: 'query',
         format: 'json',
-        prop: 'revisions',
+        prop: 'info|revisions',
+        inprop: 'url',
         rvprop: 'content',
         rvslots: 'main',
         generator: 'categorymembers',

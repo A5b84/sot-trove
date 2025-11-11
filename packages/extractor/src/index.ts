@@ -1,5 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join, resolve } from 'path';
+import { extractTreasures, type Treasure } from './treasure';
+import { LOCALE } from './util';
 import { fetchAllCategoryMembers, type Page } from './wiki';
 
 const REFRESH_CACHE_FLAG = '--refresh-cache';
@@ -7,6 +9,18 @@ const REFRESH_CACHE = process.argv.includes(REFRESH_CACHE_FLAG);
 const CACHE_DIRECTORY = resolve('cache');
 
 const pages = await getPages();
+const treasures: Treasure[] = [];
+
+for (const page of pages) {
+    for (const treasure of extractTreasures(page)) {
+        treasures.push(treasure);
+    }
+}
+
+treasures.sort((t1, t2) => t1.name.localeCompare(t2.name, LOCALE));
+const treasuresPath = join(CACHE_DIRECTORY, 'treasures.json');
+console.log(`Writing treasure data to ${treasuresPath}`);
+writeFileSync(treasuresPath, JSON.stringify(treasures));
 
 async function getPages(): Promise<Page[]> {
     const cachePath = join(CACHE_DIRECTORY, 'pages.json');
