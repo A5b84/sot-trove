@@ -13,8 +13,8 @@ export default function App(): ReactNode {
                     <thead>
                         <tr>
                             <th>Treasure</th>
-                            <th>Gold value</th>
-                            <th>Doubloon value</th>
+                            <th>Gold</th>
+                            <th>Doubloons</th>
                         </tr>
                     </thead>
                     <tbody>

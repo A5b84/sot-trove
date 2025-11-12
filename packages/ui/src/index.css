@@ -3,12 +3,17 @@
     color-scheme: light dark;
 
     --background: light-dark(hsl(220, 10%, 90%), hsl(220, 25%, 10%));
+    --background-row-thead: light-dark(hsl(220, 15%, 80%), hsl(220, 25%, 15%));
+    --background-row-alt: light-dark(hsl(215, 13%, 85%), hsl(215, 22%, 14%));
+    --background-row-hover: light-dark(hsl(212, 15%, 80%), hsl(212, 22%, 20%));
 
     --text: light-dark(hsl(215, 25%, 15%), hsl(215, 5%, 85%));
     --text-subtle: light-dark(hsl(215, 15%, 40%), hsl(215, 10%, 60%));
 
     --text-link: light-dark(hsl(215, 100%, 40%), hsl(215, 65%, 65%));
     --text-link-active: light-dark(hsl(205, 100%, 50%), hsl(205, 85%, 75%));
+
+    --border: light-dark(hsl(230, 20%, 70%), hsl(230, 20%, 27%));
 
     --transition: 0.1s;
 
@@ -38,4 +43,58 @@ a {
 footer {
     color: var(--text-subtle);
     font-size: 0.9em;
+}
+
+table {
+    --table-border-radius: 0.33em;
+    --table-corner-cell-border-radius: calc(var(--table-border-radius) - 1px);
+
+    border: 1px solid var(--border);
+    border-radius: var(--table-border-radius);
+    border-spacing: 0;
+    margin: auto;
+
+    & td,
+    & th {
+        padding: 0.4em 1em;
+    }
+
+    & > thead,
+    & > tbody {
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+    }
+
+    & > thead {
+        position: sticky;
+        top: 0;
+        z-index: 1; /* Needed otherwise gold icons show up on top of this with the light theme because of the drop shadow filter */
+
+        & > tr:first-child {
+            & > :first-child {
+                border-start-start-radius: calc(var(--table-border-radius) - 1px);
+            }
+
+            & > :last-child {
+                border-start-end-radius: calc(var(--table-border-radius) - 1px);
+            }
+        }
+
+        & th {
+            background-color: var(--background-row-thead);
+            border-block-end: 1px solid var(--border);
+            padding-block: 0.5em;
+        }
+    }
+
+    & > tbody > tr {
+        transition: var(--transition);
+
+        &:nth-child(2n) {
+            background-color: var(--background-row-alt);
+        }
+
+        &:hover {
+            background-color: var(--background-row-hover);
+        }
+    }
 }
