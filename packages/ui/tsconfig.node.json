@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "noEmit": true,
+        "types": [
+            "node",
+        ],
+    },
+    "extends": "../../tsconfig.json",
+    "include": [
+        "vite.config.ts",
+    ],
+}

@@ -3,6 +3,10 @@
     "private": true,
     "version": "0.1.0",
     "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/A5b84/sot-trove"
+    },
     "scripts": {
         "dev": "pnpm --recursive dev",
         "build": "pnpm --recursive build",

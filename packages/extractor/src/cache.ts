@@ -3,7 +3,7 @@ import { join, resolve } from 'path';
 
 const REFRESH_CACHE_FLAG = '--refresh-cache';
 const REFRESH_CACHE = process.argv.includes(REFRESH_CACHE_FLAG);
-export const CACHE_DIRECTORY = resolve('cache');
+const CACHE_DIRECTORY = resolve('cache');
 
 export async function getOrComputeCachedValue<T>(fileName: string, compute: () => Promise<T>): Promise<T> {
     const path = join(CACHE_DIRECTORY, fileName);

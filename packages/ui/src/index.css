@@ -1,0 +1,41 @@
+:root {
+    font-family: Inter, system-ui, sans-serif;
+    color-scheme: light dark;
+
+    --background: light-dark(hsl(220, 10%, 90%), hsl(220, 25%, 10%));
+
+    --text: light-dark(hsl(215, 25%, 15%), hsl(215, 5%, 85%));
+    --text-subtle: light-dark(hsl(215, 15%, 40%), hsl(215, 10%, 60%));
+
+    --text-link: light-dark(hsl(215, 100%, 40%), hsl(215, 65%, 65%));
+    --text-link-active: light-dark(hsl(205, 100%, 50%), hsl(205, 85%, 75%));
+
+    --transition: 0.1s;
+
+    background-color: var(--background);
+    color: var(--text);
+}
+
+body {
+    max-width: 64em;
+    padding-inline: 2em;
+    margin: 1em auto;
+}
+
+a {
+    color: var(--text-link);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: var(--text-link-active);
+    }
+}
+
+footer {
+    color: var(--text-subtle);
+    font-size: 0.9em;
+}

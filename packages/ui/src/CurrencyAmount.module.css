@@ -1,0 +1,11 @@
+.currency-icon {
+    width: 1em;
+    margin-inline-start: 0.5ch;
+    margin-block-end: -2px;
+
+    @media (prefers-color-scheme: light) {
+        &[data-currency="gold"] {
+            filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.75));
+        }
+    }
+}

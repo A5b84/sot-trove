@@ -1,10 +1,14 @@
+import type { GameData } from 'common';
 import { writeFileSync } from 'fs';
-import { join } from 'path';
-import { CACHE_DIRECTORY } from './cache';
+import { resolve } from 'path';
 import { CargoTreasureProvider } from './treasure/CargoTreasureProvider';
 
 const treasureProvider = new CargoTreasureProvider();
 const treasures = await treasureProvider.getTreasures();
-const treasuresPath = join(CACHE_DIRECTORY, 'treasures.json');
-console.log(`Writing data of ${treasures.length} treasures to ${treasuresPath}`);
-writeFileSync(treasuresPath, JSON.stringify(treasures));
+const gameData: GameData = {
+    generatedOn: Date.now(),
+    treasures,
+};
+const dataPath = resolve('../ui/src/gameData.json');
+console.log(`Writing data to ${dataPath}`);
+writeFileSync(dataPath, JSON.stringify(gameData));

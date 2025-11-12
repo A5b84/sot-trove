@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "lib": [
+            "ES2024",
+            "DOM",
+        ],
+        "noEmit": true,
+        "types": [
+            "vite/client",
+        ],
+    },
+    "extends": "../../tsconfig.json",
+    "include": [
+        "src",
+    ],
+    "references": [
+        {
+            "path": "../common/tsconfig.json",
+        },
+    ],
+}
