@@ -1,5 +1,5 @@
 import type { GameData, Treasure } from 'common';
-import gameData from './gameData.json';
+import gameDataJson from './gameData.json';
 import { normalizeForSearch } from './util';
 
 export type EnrichedTreasure = Treasure &
@@ -12,9 +12,10 @@ export type EnrichedGameData = Omit<GameData, 'treasures'> & {
     readonly treasures: readonly EnrichedTreasure[];
 };
 
+const baseGamedata = gameDataJson as unknown as GameData;
 export const GAME_DATA: EnrichedGameData = {
-    ...gameData,
-    treasures: gameData.treasures.map<EnrichedTreasure>((treasure, index) => ({
+    ...baseGamedata,
+    treasures: baseGamedata.treasures.map<EnrichedTreasure>((treasure, index) => ({
         ...treasure,
         id: index,
         normalizedName: normalizeForSearch(treasure.name),

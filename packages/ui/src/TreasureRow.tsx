@@ -1,6 +1,7 @@
-import { FACTIONS, guessWikiLink } from 'common';
+import { FACTIONS } from 'common';
 import { memo, type ReactNode } from 'react';
 import CurrencyAmount from './CurrencyAmount';
+import FactionLink from './FactionLink';
 import type { EnrichedTreasure } from './gameData';
 import style from './TreasureRow.module.css';
 
@@ -18,7 +19,7 @@ const TreasureRow = memo(function ({ treasure }: { treasure: EnrichedTreasure })
                 {treasure.sellTo.map(
                     buyer =>
                         buyer !== FACTIONS.SOVEREIGNS &&
-                        buyer !== FACTIONS.REAPERS_BONES && [<a href={guessWikiLink(buyer)}>{buyer}</a>, <br />]
+                        buyer !== FACTIONS.REAPERS_BONES && [<FactionLink name={buyer} />, <br />]
                 )}
             </td>
             <td className={style['checkmark-cell']}>{treasure.sellTo.includes(FACTIONS.SOVEREIGNS) && '✓'}</td>

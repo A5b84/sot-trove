@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import style from './CurrencyAmount.module.css';
+import InlineIcon from './InlineIcon';
 import { LOCALE } from './util';
 import doubloonIcon from '/doubloon.svg';
 import goldIcon from '/gold.svg';
@@ -28,7 +28,7 @@ export default function CurrencyAmount({
         <>
             {formatNumber(minAmount)}
             {isAmountToShow(maxAmount) && <>–{formatNumber(maxAmount)}</>}
-            <img className={style['currency-icon']} src={ICON_BY_CURRENCY[currency]} data-currency={currency} />
+            <InlineIcon src={ICON_BY_CURRENCY[currency]} iconId={currency} spaceBefore />
         </>
     );
 }

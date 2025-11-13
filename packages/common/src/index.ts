@@ -9,7 +9,7 @@ export type Treasure = Readonly<{
     minGoldReward?: number;
     maxGoldReward?: number;
     doubloonReward?: number;
-    sellTo: string[];
+    sellTo: readonly string[];
 }>;
 
 export const FACTIONS = {

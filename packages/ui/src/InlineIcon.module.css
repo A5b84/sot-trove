@@ -1,0 +1,19 @@
+.inline-icon {
+    width: 1em;
+    margin-block-end: -2px;
+
+    &.space-before {
+        margin-inline-start: 0.5ch;
+    }
+
+    &.space-after {
+        margin-inline-end: 0.5ch;
+    }
+
+    @media (prefers-color-scheme: light) {
+        &[data-icon-id="gold"],
+        &[data-icon-id="Gold Hoarders"] {
+            filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.75));
+        }
+    }
+}

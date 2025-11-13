@@ -1,4 +1,6 @@
+import { FACTIONS } from 'common';
 import type { ReactNode } from 'react';
+import FactionLink from './FactionLink';
 import type { EnrichedTreasure } from './gameData';
 import TreasureRow from './TreasureRow';
 
@@ -15,10 +17,10 @@ export default function TreasuresTable({ treasures }: { treasures: readonly Enri
                     <th>Value</th>
                     <th>Buyers</th>
                     <th>
-                        <a href='https://seaofthieves.wiki.gg/wiki/Sovereigns'>Sovereigns</a>
+                        <FactionLink name={FACTIONS.SOVEREIGNS} />
                     </th>
                     <th>
-                        <a href='https://seaofthieves.wiki.gg/wiki/Reaper%27s_Bones'>Reaper’s Bones</a>
+                        <FactionLink name={FACTIONS.REAPERS_BONES} />
                     </th>
                 </tr>
             </thead>
