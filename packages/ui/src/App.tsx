@@ -1,44 +1,17 @@
 import type { ReactNode } from 'react';
 import packageJson from '../../../package.json';
-import style from './App.module.css';
-import CurrencyAmount from './CurrencyAmount';
 import { GAME_DATA } from './gameData';
-import { toIsoDateString } from './util';
+import TreasureSearch from './TreasureSearch';
+import { FOCUS_SEARCH_BAR_SHORTCUTS, toIsoDateString } from './util';
 
 export default function App(): ReactNode {
     return (
         <>
             <main>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Treasure</th>
-                            <th>Gold</th>
-                            <th>Doubloons</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {GAME_DATA.treasures.map((treasure, index) => (
-                            <tr key={index}>
-                                <td>
-                                    <a href={treasure.url}>{treasure.name}</a>
-                                </td>
-                                <td className={style['number-cell']}>
-                                    <CurrencyAmount
-                                        minAmount={treasure.minGoldReward}
-                                        maxAmount={treasure.maxGoldReward}
-                                        currency='gold'
-                                    />
-                                </td>
-                                <td className={style['number-cell']}>
-                                    <CurrencyAmount minAmount={treasure.doubloonReward} currency='doubloon' />
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                <TreasureSearch />
             </main>
             <footer>
+                <p>Tip: press {FOCUS_SEARCH_BAR_SHORTCUTS.join(' or ')} to select the search bar.</p>
                 <p>Data last updated on {toIsoDateString(new Date(GAME_DATA.generatedOn))}.</p>
                 <p>
                     This page uses data from the{' '}

@@ -1,9 +1,8 @@
 import type { ReactNode } from 'react';
 import style from './CurrencyAmount.module.css';
+import { LOCALE } from './util';
 import doubloonIcon from '/doubloon.svg';
 import goldIcon from '/gold.svg';
-
-const LOCALE = 'en';
 
 type Currency = 'gold' | 'doubloon';
 

@@ -3,8 +3,9 @@
     color-scheme: light dark;
 
     --background: light-dark(hsl(220, 10%, 90%), hsl(220, 25%, 10%));
+    --background-alt: light-dark(hsl(215, 13%, 85%), hsl(215, 22%, 14%));
     --background-row-thead: light-dark(hsl(220, 15%, 80%), hsl(220, 25%, 15%));
-    --background-row-alt: light-dark(hsl(215, 13%, 85%), hsl(215, 22%, 14%));
+    --background-row-alt: var(--background-alt);
     --background-row-hover: light-dark(hsl(212, 15%, 80%), hsl(212, 22%, 20%));
 
     --text: light-dark(hsl(215, 25%, 15%), hsl(215, 5%, 85%));
@@ -14,6 +15,7 @@
     --text-link-active: light-dark(hsl(205, 100%, 50%), hsl(205, 85%, 75%));
 
     --border: light-dark(hsl(230, 20%, 70%), hsl(230, 20%, 27%));
+    --border-radius: 0.33em;
 
     --transition: 0.1s;
 
@@ -45,14 +47,21 @@ footer {
     font-size: 0.9em;
 }
 
+input {
+    padding: 0.5em 1em;
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+
+    background-color: var(--background-alt);
+    font-size: 1em;
+}
+
 table {
-    --table-border-radius: 0.33em;
-    --table-corner-cell-border-radius: calc(var(--table-border-radius) - 1px);
+    --table-corner-cell-border-radius: calc(var(--border-radius) - 1px);
 
     border: 1px solid var(--border);
-    border-radius: var(--table-border-radius);
+    border-radius: var(--border-radius);
     border-spacing: 0;
-    margin: auto;
 
     & td,
     & th {
@@ -71,11 +80,11 @@ table {
 
         & > tr:first-child {
             & > :first-child {
-                border-start-start-radius: calc(var(--table-border-radius) - 1px);
+                border-start-start-radius: calc(var(--border-radius) - 1px);
             }
 
             & > :last-child {
-                border-start-end-radius: calc(var(--table-border-radius) - 1px);
+                border-start-end-radius: calc(var(--border-radius) - 1px);
             }
         }
 
@@ -97,4 +106,9 @@ table {
             background-color: var(--background-row-hover);
         }
     }
+}
+
+.subtle {
+    color: var(--text-subtle);
+    font-style: italic;
 }
