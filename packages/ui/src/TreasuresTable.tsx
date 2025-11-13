@@ -12,11 +12,14 @@ export default function TreasuresTable({ treasures }: { treasures: readonly Enri
             <thead>
                 <tr>
                     <th>Treasure</th>
-                    <th>Gold</th>
-                    <th>Doubloons</th>
+                    <th>Value</th>
                     <th>Buyers</th>
-                    <th>Sovereigns</th>
-                    <th>Reaper’s Bones</th>
+                    <th>
+                        <a href='https://seaofthieves.wiki.gg/wiki/Sovereigns'>Sovereigns</a>
+                    </th>
+                    <th>
+                        <a href='https://seaofthieves.wiki.gg/wiki/Reaper%27s_Bones'>Reaper’s Bones</a>
+                    </th>
                 </tr>
             </thead>
             <tbody>

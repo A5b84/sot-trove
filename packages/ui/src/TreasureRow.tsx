@@ -1,4 +1,4 @@
-import { FACTIONS } from 'common';
+import { FACTIONS, guessWikiLink } from 'common';
 import { memo, type ReactNode } from 'react';
 import CurrencyAmount from './CurrencyAmount';
 import type { EnrichedTreasure } from './gameData';
@@ -12,13 +12,13 @@ const TreasureRow = memo(function ({ treasure }: { treasure: EnrichedTreasure })
             </td>
             <td className={style['number-cell']}>
                 <CurrencyAmount minAmount={treasure.minGoldReward} maxAmount={treasure.maxGoldReward} currency='gold' />
-            </td>
-            <td className={style['number-cell']}>
                 <CurrencyAmount minAmount={treasure.doubloonReward} currency='doubloon' />
             </td>
             <td>
                 {treasure.sellTo.map(
-                    buyer => buyer !== FACTIONS.SOVEREIGNS && buyer !== FACTIONS.REAPERS_BONES && [buyer, <br />]
+                    buyer =>
+                        buyer !== FACTIONS.SOVEREIGNS &&
+                        buyer !== FACTIONS.REAPERS_BONES && [<a href={guessWikiLink(buyer)}>{buyer}</a>, <br />]
                 )}
             </td>
             <td className={style['checkmark-cell']}>{treasure.sellTo.includes(FACTIONS.SOVEREIGNS) && '✓'}</td>
