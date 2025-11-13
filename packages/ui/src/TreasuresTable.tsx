@@ -14,6 +14,9 @@ export default function TreasuresTable({ treasures }: { treasures: readonly Enri
                     <th>Treasure</th>
                     <th>Gold</th>
                     <th>Doubloons</th>
+                    <th>Buyers</th>
+                    <th>Sovereigns</th>
+                    <th>Reaper’s Bones</th>
                 </tr>
             </thead>
             <tbody>

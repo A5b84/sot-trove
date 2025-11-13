@@ -1,5 +1,5 @@
 import { getOrComputeCachedValue } from '../cache';
-import { LOCALE } from '../util';
+import { LOCALE, normalizeFactionName } from '../util';
 
 import type { Page } from '../wiki';
 import { tokenizeWikitext } from '../wikitext/tokenizeWikitext';
@@ -51,6 +51,7 @@ function extractTreasureFromTemplate(node: WikiTemplateNode, page: Page): Treasu
     let minGoldReward: number | undefined;
     let maxGoldReward: number | undefined;
     let doubloonReward: number | undefined;
+    let sellTo: string[] = [];
 
     for (const parameter of node.parameters) {
         if (parameter.value.length === 0) {
@@ -81,6 +82,12 @@ function extractTreasureFromTemplate(node: WikiTemplateNode, page: Page): Treasu
             case 'reward-d':
                 doubloonReward = parseIntParameter(parameter);
                 break;
+
+            case 'sellto':
+                sellTo = stringifyNodes(parameter.value).split(',').map(normalizeFactionName);
+                sellTo = Array.from(new Set(sellTo));
+                sellTo.sort();
+                break;
         }
     }
 
@@ -94,6 +101,7 @@ function extractTreasureFromTemplate(node: WikiTemplateNode, page: Page): Treasu
         minGoldReward,
         maxGoldReward,
         doubloonReward,
+        sellTo,
     };
 }
 

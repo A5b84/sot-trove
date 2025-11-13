@@ -1,3 +1,8 @@
 .number-cell {
     text-align: right;
 }
+
+.checkmark-cell {
+    text-align: center;
+    font-weight: bold;
+}

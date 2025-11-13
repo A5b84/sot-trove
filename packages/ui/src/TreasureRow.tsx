@@ -1,3 +1,4 @@
+import { FACTIONS } from 'common';
 import { memo, type ReactNode } from 'react';
 import CurrencyAmount from './CurrencyAmount';
 import type { EnrichedTreasure } from './gameData';
@@ -15,6 +16,13 @@ const TreasureRow = memo(function ({ treasure }: { treasure: EnrichedTreasure })
             <td className={style['number-cell']}>
                 <CurrencyAmount minAmount={treasure.doubloonReward} currency='doubloon' />
             </td>
+            <td>
+                {treasure.sellTo.map(
+                    buyer => buyer !== FACTIONS.SOVEREIGNS && buyer !== FACTIONS.REAPERS_BONES && [buyer, <br />]
+                )}
+            </td>
+            <td className={style['checkmark-cell']}>{treasure.sellTo.includes(FACTIONS.SOVEREIGNS) && '✓'}</td>
+            <td className={style['checkmark-cell']}>{treasure.sellTo.includes(FACTIONS.REAPERS_BONES) && '✓'}</td>
         </tr>
     );
 });

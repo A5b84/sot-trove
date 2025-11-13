@@ -1,4 +1,4 @@
-import type { Treasure } from 'common';
+import { guessWikiLink, type Treasure } from 'common';
 import { getOrComputeCachedValue } from '../cache';
 import { getAllRowsOfCargoTable } from '../cargo';
 import type { ITreasureProvider } from './ITreasureProvider';
@@ -25,10 +25,11 @@ type CargoTreasure = {
 function convertCargoTreasure(treasure: CargoTreasure): Treasure {
     return {
         name: treasure.fullname,
-        url: `https://seaofthieves.wiki.gg/wiki/${treasure.fullname.replaceAll(' ', '_')}`,
+        url: guessWikiLink(treasure.fullname),
         minGoldReward: parseOptionalInt(treasure.rewardMin),
         maxGoldReward: parseOptionalInt(treasure.rewardMax),
         doubloonReward: parseOptionalInt(treasure.rewardD),
+        sellTo: [],
     };
 }
 
