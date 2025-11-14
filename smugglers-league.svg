@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Not covered by the license at the repo root -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <defs>
+        <g id="half">
+            <path
+                d="
+                M 7.9020215,1.0678407 C 7.570483,1.1818071 7.2579042,1.289256 6.7544223,1.7823569 6.2509404,2.2754577 5.6036347,3.1119759 5.7282186,4.0323714 5.8528025,4.9527669 6.7629732,5.9392089 7.3870253,6.7672008 8.0110774,7.5951927 8.3489358,8.264635 8.4124991,8.6790674 8.4760623,9.0934998 8.2653184,9.252875 8.0545701,9.4122535
+                M 3.8442267,6.7121418 c 0.1423788,1.3627683 0.2847547,2.7255098 0.8059729,3.7145532 0.5212182,0.989043 1.4212198,1.604299 2.0466819,1.91703 0.6254621,0.312731 0.976317,0.322901 1.327179,0.333071
+                "
+                fill="none"
+                stroke="#b7ae66"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5" />
+
+            <path d="M 4 8 L 2.5 12.5 L 6 12" fill="#b7ae66" />
+        </g>
+    </defs>
+
+    <g mask="url(#mask)">
+        <use href="#half" />
+        <use href="#half" transform="scale(-1 1)" transform-origin="8 8" />
+        <path d="M 8 16 l -1.5 -3 h 3" fill="#b7ae66" />
+    </g>
+
+    <mask id="mask">
+        <rect width="16" height="16" fill="white" />
+        <line x1="5" x2="16" y1="0" y2="13" stroke="black" stroke-width="0.75" />
+    </mask>
+</svg>

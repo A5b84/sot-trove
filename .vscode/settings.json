@@ -1,0 +1,10 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "[markdown]": {
+        "editor.defaultFormatter": null, // Prettier makes lists ugly
+    }
+}

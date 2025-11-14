@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Not covered by the license at the repo root -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <defs>
+        <path
+            id="half"
+            mask="url(#mask)"
+            d="M 8 1 l -4 1.5 l -3 3.5 l 1.5 3 l -0.5 1 l 1 1.5 l 2.5 -0.5 l -0.5 3 l 1.5 1 l 1.5 -0.5 Z"
+            fill="#b24c81"
+            stroke="#b24c81"
+            stroke-linejoin="round" />
+    </defs>
+
+    <mask id="mask">
+        <rect width="8.025" height="16" fill="white" />
+        <path d="M 8.05 1.5 l -6 5 L 8.05 10.5" />
+        <path d="M 8.025 3.5 l -3.5 3 L 8.025 8.5" fill="white" />
+        <path d="M 8.05 4.5 l -1 1.5 L 8.05 7.5" />
+        <path d="M 8.05 11 l -1.5 2.5 L 8.05 13" />
+    </mask>
+
+    <use href="#half" />
+    <use href="#half" transform="scale(-1 1)" transform-origin="8 8" />
+</svg>
