@@ -12,8 +12,9 @@
 
     @media (prefers-color-scheme: light) {
         &[data-icon-id="gold"],
-        &[data-icon-id="Gold Hoarders"] {
-            filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.75));
+        &[data-icon-id="Gold Hoarders"],
+        &[data-icon-id="Sovereigns"] {
+            filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.5));
         }
     }
 }

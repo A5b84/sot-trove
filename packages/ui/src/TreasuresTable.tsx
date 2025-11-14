@@ -5,6 +5,18 @@ import type { EnrichedTreasure } from './gameData';
 import TreasureRow from './TreasureRow';
 
 export default function TreasuresTable({ treasures }: { treasures: readonly EnrichedTreasure[] }): ReactNode {
+    const columns = [
+        <th>Treasure</th>,
+        <th>Value</th>,
+        <th>Buyers</th>,
+        <th>
+            <FactionLink name={FACTIONS.SOVEREIGNS} />
+        </th>,
+        <th>
+            <FactionLink name={FACTIONS.REAPERS_BONES} />
+        </th>,
+    ];
+
     return (
         <table
             style={{
@@ -12,17 +24,7 @@ export default function TreasuresTable({ treasures }: { treasures: readonly Enri
             }}
         >
             <thead>
-                <tr>
-                    <th>Treasure</th>
-                    <th>Value</th>
-                    <th>Buyers</th>
-                    <th>
-                        <FactionLink name={FACTIONS.SOVEREIGNS} />
-                    </th>
-                    <th>
-                        <FactionLink name={FACTIONS.REAPERS_BONES} />
-                    </th>
-                </tr>
+                <tr>{columns}</tr>
             </thead>
             <tbody>
                 {treasures.length > 0 ? (
@@ -30,7 +32,7 @@ export default function TreasuresTable({ treasures }: { treasures: readonly Enri
                 ) : (
                     <tr>
                         <td
-                            colSpan={3}
+                            colSpan={columns.length}
                             className='subtle'
                             style={{
                                 textAlign: 'center',

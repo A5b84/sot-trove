@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { GAME_DATA } from './gameData';
+import { GAME_DATA, type EnrichedTreasure } from './gameData';
 import TreasuresTable from './TreasuresTable';
 import { compareIgnoreCase, FOCUS_SEARCH_BAR_SHORTCUTS, normalizeForSearch } from './util';
 
@@ -8,7 +8,7 @@ export default function TreasureSearch(): ReactNode {
     const queryTerms = normalizeForSearch(query).trim().split(/\s+/);
     const filteredTreasures =
         queryTerms.length > 0
-            ? GAME_DATA.treasures.filter(treasure => queryTerms.every(term => treasure.normalizedName.includes(term)))
+            ? GAME_DATA.treasures.filter(treasure => matchesTerms(queryTerms, treasure))
             : GAME_DATA.treasures;
 
     const searchBarRef = useRef<HTMLInputElement>(null);
@@ -58,5 +58,13 @@ export default function TreasureSearch(): ReactNode {
             />
             <TreasuresTable treasures={filteredTreasures} />
         </>
+    );
+}
+
+function matchesTerms(queryTerms: readonly string[], treasure: EnrichedTreasure): boolean {
+    return queryTerms.every(
+        term =>
+            treasure.normalizedName.includes(term) ||
+            treasure.sellToNormalizedForSearch.some(faction => faction.includes(term))
     );
 }

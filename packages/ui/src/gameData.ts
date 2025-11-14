@@ -6,6 +6,7 @@ export type EnrichedTreasure = Treasure &
     Readonly<{
         id: number;
         normalizedName: string;
+        sellToNormalizedForSearch: readonly string[];
     }>;
 
 export type EnrichedGameData = Omit<GameData, 'treasures'> & {
@@ -19,5 +20,6 @@ export const GAME_DATA: EnrichedGameData = {
         ...treasure,
         id: index,
         normalizedName: normalizeForSearch(treasure.name),
+        sellToNormalizedForSearch: treasure.sellTo.map(normalizeForSearch),
     })),
 };
