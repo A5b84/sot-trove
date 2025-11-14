@@ -9,6 +9,7 @@ export type Treasure = Readonly<{
     minGoldReward?: number;
     maxGoldReward?: number;
     doubloonReward?: number;
+    hasRewardNote?: true;
     sellTo: readonly string[];
 }>;
 

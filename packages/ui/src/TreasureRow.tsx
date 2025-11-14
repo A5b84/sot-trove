@@ -14,6 +14,11 @@ const TreasureRow = memo(function ({ treasure }: { treasure: EnrichedTreasure })
             <td className={style['number-cell']}>
                 <CurrencyAmount minAmount={treasure.minGoldReward} maxAmount={treasure.maxGoldReward} currency='gold' />
                 <CurrencyAmount minAmount={treasure.doubloonReward} currency='doubloon' />
+                {treasure.hasRewardNote && (
+                    <span className={style['note']} title='May vary, see the wiki article'>
+                        *
+                    </span>
+                )}
             </td>
             <td>
                 {treasure.sellTo.map(

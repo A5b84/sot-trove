@@ -11,6 +11,9 @@ import type { Treasure } from 'common';
 import { fetchAllCategoryMembers } from '../wiki';
 import type { ITreasureProvider } from './ITreasureProvider';
 
+// See https://seaofthieves.wiki.gg/wiki/Template:Bool
+const TRUE_VALUES: ReadonlySet<string> = new Set(['y', 'yes', 'true', '1']);
+
 /**
  * Treasure provider that gets its information from `{{treasure}}` templates in pages' sources.
  */
@@ -51,6 +54,7 @@ function extractTreasureFromTemplate(node: WikiTemplateNode, page: Page): Treasu
     let minGoldReward: number | undefined;
     let maxGoldReward: number | undefined;
     let doubloonReward: number | undefined;
+    let hasRewardNote: true | undefined;
     let sellTo: string[] = [];
 
     for (const parameter of node.parameters) {
@@ -83,6 +87,12 @@ function extractTreasureFromTemplate(node: WikiTemplateNode, page: Page): Treasu
                 doubloonReward = parseIntParameter(parameter);
                 break;
 
+            case 'reward-seearticle':
+                if (parseBooleanParameter(parameter)) {
+                    hasRewardNote = true;
+                }
+                break;
+
             case 'sellto':
                 sellTo = stringifyNodes(parameter.value).split(',').map(normalizeFactionName);
                 sellTo = Array.from(new Set(sellTo));
@@ -101,6 +111,7 @@ function extractTreasureFromTemplate(node: WikiTemplateNode, page: Page): Treasu
         minGoldReward,
         maxGoldReward,
         doubloonReward,
+        hasRewardNote,
         sellTo,
     };
 }
@@ -109,8 +120,17 @@ function parseIntParameter(node: WikiTemplateNodeParameter): number {
     return parseInt(stringifyNodes(node.value));
 }
 
+function parseBooleanParameter(node: WikiTemplateNodeParameter): boolean {
+    return TRUE_VALUES.has(stringifyNodes(node.value).toLowerCase());
+}
+
 function stringifyNodes(nodes: WikiNode[]): string {
-    return nodes.map(stringifyNode).join('');
+    const stringifiedNodes = nodes.map(stringifyNode);
+    if (stringifiedNodes.length > 0) {
+        stringifiedNodes[0] = stringifiedNodes[0].trimStart();
+        stringifiedNodes[stringifiedNodes.length - 1] = stringifiedNodes[stringifiedNodes.length - 1].trimEnd();
+    }
+    return stringifiedNodes.join('');
 }
 
 function stringifyNode(node: WikiNode): string {

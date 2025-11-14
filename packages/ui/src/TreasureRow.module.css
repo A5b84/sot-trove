@@ -6,3 +6,10 @@
     text-align: center;
     font-weight: bold;
 }
+
+.note {
+    padding-inline-start: 0.25ch;
+    color: var(--text-subtle);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
