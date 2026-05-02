@@ -8,7 +8,7 @@ export function normalizeCase(value: string): string {
 export function forEachTemplate(
     node: WikiNode,
     normalizedTemplateName: string,
-    action: (templateNode: WikiTemplateNode) => void
+    action: (templateNode: WikiTemplateNode) => void,
 ): void {
     switch (node.type) {
         case 'text':
@@ -22,9 +22,8 @@ export function forEachTemplate(
             // Not checking recursively because it's not needed for our use case
             break;
 
-        default: {
-            const _exhaustivenessCheck: never = node;
+        default:
+            node satisfies never;
             throw new Error(`Unknown node type for node ${node}`);
-        }
     }
 }

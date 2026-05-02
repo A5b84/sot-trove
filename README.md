@@ -9,7 +9,7 @@ This uses treasure data from the [Sea of Thieves Wiki](https://seaofthieves.wiki
 
 Useful commands:
 
-- `pnpm update-data`: Update data used by the frontend. This must be run at least once before starting the frontend.
+- `pnpm update-data`: update data used by the frontend. This must be run at least once before starting the frontend.
 - `pnpm dev`: start a Vite dev server for the frontend.
 - `pnpm build`: build the frontend.
 - `pnpm preview`: run the frontend as last built.

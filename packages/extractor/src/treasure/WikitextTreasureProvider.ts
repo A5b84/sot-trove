@@ -42,7 +42,7 @@ function extractTreasures(page: Page): Treasure[] {
 
     for (const node of nodes) {
         forEachTemplate(node, NORMALIZED_TREASURE_TEMPLATE_NAME, templateNode =>
-            treasures.push(extractTreasureFromTemplate(templateNode, page))
+            treasures.push(extractTreasureFromTemplate(templateNode, page)),
         );
     }
 
@@ -116,8 +116,21 @@ function extractTreasureFromTemplate(node: WikiTemplateNode, page: Page): Treasu
     };
 }
 
-function parseIntParameter(node: WikiTemplateNodeParameter): number {
-    return parseInt(stringifyNodes(node.value));
+function parseIntParameter(node: WikiTemplateNodeParameter): number | undefined {
+    const stringified = stringifyNodes(node.value);
+
+    if (!stringified) {
+        return undefined;
+    }
+
+    const result = parseInt(stringified);
+
+    if (isNaN(result)) {
+        console.warn('Could not parse int from node', node);
+        return undefined;
+    }
+
+    return result;
 }
 
 function parseBooleanParameter(node: WikiTemplateNodeParameter): boolean {

@@ -34,7 +34,7 @@ export default function CurrencyAmount({
 }
 
 function isAmountToShow(value?: number): value is number {
-    return value !== undefined && value !== 0;
+    return typeof value === 'number' && value !== 0;
 }
 
 function formatNumber(value: number): string {
