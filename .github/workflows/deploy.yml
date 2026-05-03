@@ -1,0 +1,42 @@
+name: Deploy
+
+on:
+    push:
+        branches: [main]
+    schedule:
+        - cron: 27 18 1 * *
+    workflow_dispatch:
+
+jobs:
+    deploy:
+        name: Deploy
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v6
+            - name: Setup Node
+              uses: actions/setup-node@v6
+              with:
+                  node-version: 24
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v6
+              with:
+                  run_install: true
+            - name: Run tests
+              run: pnpm test
+            - name: Update data
+              run: pnpm update-data
+            - name: Deploy
+              run: |
+                  git config user.name 'github-actions[bot]'
+                  git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+                  git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+
+                  message="Update after \`${{ github.event_name }}\` event ($(date --iso-8601), from ${GITHUB_SHA::7})
+
+                  Run URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+                  pnpm run deploy --message "$message"
