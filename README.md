@@ -14,7 +14,6 @@ Useful commands:
 - `pnpm build`: build the frontend.
 - `pnpm preview`: run the frontend as last built.
 - `pnpm run deploy`: build the frontend and deploy it to GitHub pages.
-- `pnpm run deploy-data`: pushes the current data to the `data` branch.
 
 ## Licensing
 
