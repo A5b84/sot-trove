@@ -71,10 +71,10 @@ function extractTreasureFromTemplate(node: WikiTemplateNode, page: Page): Treasu
                 const value = stringifyNodes(parameter.value);
                 if (value.includes('-')) {
                     const [min, max] = value.split('-', 2);
-                    minGoldReward = parseInt(min);
-                    maxGoldReward = parseInt(max);
+                    minGoldReward = parseIntValue(min);
+                    maxGoldReward = parseIntValue(max);
                 } else {
-                    minGoldReward = parseInt(value);
+                    minGoldReward = parseIntValue(value);
                 }
                 break;
             }
@@ -123,7 +123,7 @@ function parseIntParameter(node: WikiTemplateNodeParameter): number | undefined 
         return undefined;
     }
 
-    const result = parseInt(stringified);
+    const result = parseIntValue(stringified);
 
     if (isNaN(result)) {
         console.warn('Could not parse int from node', node);
@@ -131,6 +131,10 @@ function parseIntParameter(node: WikiTemplateNodeParameter): number | undefined 
     }
 
     return result;
+}
+
+function parseIntValue(value: string): number {
+    return parseInt(value.replace(',', ''));
 }
 
 function parseBooleanParameter(node: WikiTemplateNodeParameter): boolean {
