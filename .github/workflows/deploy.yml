@@ -44,3 +44,11 @@ jobs:
                   Run URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
                   pnpm run deploy --message "$message"
+
+                  data_worktree_path=/tmp/sot-trove-data
+                  git fetch origin data
+                  git worktree add $data_worktree_path data
+                  cp packages/ui/src/gameData.json $data_worktree_path
+                  git -C $data_worktree_path add $data_worktree_path
+                  git -C $data_worktree_path commit -m "$message"
+                  git -C $data_worktree_path push
