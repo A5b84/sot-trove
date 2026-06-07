@@ -13,7 +13,6 @@ Useful commands:
 - `pnpm dev`: start a Vite dev server for the frontend.
 - `pnpm build`: build the frontend.
 - `pnpm preview`: run the frontend as last built.
-- `pnpm run deploy`: build the frontend and deploy it to GitHub pages.
 
 ## Licensing
 

@@ -16,7 +16,9 @@ jobs:
         name: Deploy
         runs-on: ubuntu-latest
         permissions:
-            contents: write
+            contents: write # Used to publish data
+            pages: write # Used by actions/deploy-pages
+            id-token: write # Used by actions/deploy-pages
 
         steps:
             - name: Checkout
@@ -33,7 +35,9 @@ jobs:
               run: pnpm test
             - name: Update data
               run: pnpm update-data
-            - name: Deploy
+            - name: Build
+              run: pnpm build
+            - name: Publish data
               run: |
                   git config user.name 'github-actions[bot]'
                   git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -43,8 +47,6 @@ jobs:
 
                   Run URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
-                  pnpm run deploy --message "$message"
-
                   data_worktree_path=/tmp/sot-trove-data
                   git fetch origin data
                   git worktree add $data_worktree_path data
@@ -52,3 +54,9 @@ jobs:
                   git -C $data_worktree_path add $data_worktree_path
                   git -C $data_worktree_path commit -m "$message"
                   git -C $data_worktree_path push
+            - name: Upload GitHub Pages artifact
+              uses: actions/upload-pages-artifact@v5
+              with:
+                  path: packages/ui/dist/
+            - name: Deploy to GitHub Pages
+              uses: actions/deploy-pages@v5
