@@ -1,5 +1,5 @@
 export type GameData = Readonly<{
-    generatedOn: number;
+    generatedOn: Date | string; // String when deserialized from JSON
     treasures: readonly Treasure[];
 }>;
 

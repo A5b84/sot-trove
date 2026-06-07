@@ -11,10 +11,10 @@ if (treasures.length === 0) {
 }
 
 const gameData: GameData = {
-    generatedOn: Date.now(),
+    generatedOn: new Date(),
     treasures,
 };
 
 const dataPath = resolve('../ui/src/gameData.json');
 console.log(`Writing data to ${dataPath}`);
-writeFileSync(dataPath, JSON.stringify(gameData));
+writeFileSync(dataPath, JSON.stringify(gameData, null, 4));
