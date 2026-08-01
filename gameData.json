@@ -1,5 +1,5 @@
 {
-    "generatedOn": "2026-07-01T20:19:49.412Z",
+    "generatedOn": "2026-08-01T19:39:57.146Z",
     "treasures": [
         {
             "name": "Admiral's Chest",
@@ -1206,6 +1206,13 @@
             ]
         },
         {
+            "name": "Crate of Crude Repair Materials",
+            "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Crude_Repair_Materials",
+            "sellTo": [
+                "Merchant Alliance"
+            ]
+        },
+        {
             "name": "Crate of Curious Fish Scales",
             "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Curious_Fish_Scales",
             "minGoldReward": 1000,
@@ -1487,6 +1494,20 @@
             ]
         },
         {
+            "name": "Crate of Unprepared Ingredients",
+            "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Unprepared_Ingredients",
+            "sellTo": [
+                "Merchant Alliance"
+            ]
+        },
+        {
+            "name": "Crate of Unprocessed Gunpowder",
+            "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Unprocessed_Gunpowder",
+            "sellTo": [
+                "Merchant Alliance"
+            ]
+        },
+        {
             "name": "Crate of Unrefined Spices",
             "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Unrefined_Spices",
             "sellTo": [
@@ -1496,6 +1517,13 @@
         {
             "name": "Crate of Unsorted Silks",
             "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Unsorted_Silks",
+            "sellTo": [
+                "Merchant Alliance"
+            ]
+        },
+        {
+            "name": "Crate of Unwrought Munitions",
+            "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Unwrought_Munitions",
             "sellTo": [
                 "Merchant Alliance"
             ]
