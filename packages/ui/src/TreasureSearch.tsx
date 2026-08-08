@@ -43,19 +43,26 @@ export default function TreasureSearch(): ReactNode {
 
     return (
         <>
-            <input
-                value={query}
-                onChange={e => setQuery(e.target.value)}
-                ref={searchBarRef}
-                placeholder='Search'
+            <div
                 style={{
-                    display: 'block',
-                    boxSizing: 'border-box',
-                    width: '100%',
                     maxWidth: '32em',
                     margin: 'auto',
                 }}
-            />
+            >
+                <input
+                    value={query}
+                    onChange={e => setQuery(e.target.value)}
+                    ref={searchBarRef}
+                    placeholder='Search'
+                    style={{
+                        boxSizing: 'border-box',
+                        width: '100%',
+                    }}
+                />
+                <p style={{ color: 'var(--text-subtle)' }}>
+                    {filteredTreasures.length} treasure{filteredTreasures.length !== 1 ? 's' : ''}
+                </p>
+            </div>
             <TreasuresTable treasures={filteredTreasures} />
         </>
     );
@@ -65,6 +72,6 @@ function matchesTerms(queryTerms: readonly string[], treasure: EnrichedTreasure)
     return queryTerms.every(
         term =>
             treasure.normalizedName.includes(term) ||
-            treasure.sellToNormalizedForSearch.some(faction => faction.includes(term))
+            treasure.sellToNormalizedForSearch.some(faction => faction.includes(term)),
     );
 }
