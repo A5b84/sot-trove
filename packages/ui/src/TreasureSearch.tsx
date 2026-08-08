@@ -1,17 +1,27 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { GAME_DATA, type EnrichedTreasure } from './gameData';
+import Fuse from 'fuse.js';
+import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { useDebouncedCallback } from 'use-debounce';
+import { GAME_DATA } from './gameData';
 import TreasuresTable from './TreasuresTable';
-import { compareIgnoreCase, FOCUS_SEARCH_BAR_SHORTCUTS, normalizeForSearch } from './util';
+import { compareIgnoreCase, FOCUS_SEARCH_BAR_SHORTCUTS } from './util';
 
 export default function TreasureSearch(): ReactNode {
-    const [query, setQuery] = useState('');
-    const queryTerms = normalizeForSearch(query).trim().split(/\s+/);
-    const filteredTreasures =
-        queryTerms.length > 0
-            ? GAME_DATA.treasures.filter(treasure => matchesTerms(queryTerms, treasure))
-            : GAME_DATA.treasures;
-
     const searchBarRef = useRef<HTMLInputElement>(null);
+
+    const fuse = useMemo(
+        () =>
+            new Fuse(GAME_DATA.treasures, {
+                keys: ['name', 'sellTo'],
+                threshold: 0.3,
+            }),
+        [],
+    );
+
+    const [filteredTreasures, setFilteredTreasures] = useState(GAME_DATA.treasures);
+    const filterTreasures = useDebouncedCallback(
+        query => setFilteredTreasures(fuse.search(query).map(result => result.item)),
+        200,
+    );
 
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent): void => {
@@ -50,8 +60,7 @@ export default function TreasureSearch(): ReactNode {
                 }}
             >
                 <input
-                    value={query}
-                    onChange={e => setQuery(e.target.value)}
+                    onChange={e => filterTreasures(e.target.value)}
                     ref={searchBarRef}
                     placeholder='Search'
                     style={{
@@ -65,13 +74,5 @@ export default function TreasureSearch(): ReactNode {
             </div>
             <TreasuresTable treasures={filteredTreasures} />
         </>
-    );
-}
-
-function matchesTerms(queryTerms: readonly string[], treasure: EnrichedTreasure): boolean {
-    return queryTerms.every(
-        term =>
-            treasure.normalizedName.includes(term) ||
-            treasure.sellToNormalizedForSearch.some(faction => faction.includes(term)),
     );
 }

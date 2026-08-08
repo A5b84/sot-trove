@@ -1,15 +1,14 @@
+import type { Treasure } from 'common';
 import { useState, type ReactNode } from 'react';
 import {
     booleanComparator,
     chainComparators,
     numberComparator,
-    reverseComparator,
     stringArrayComparator,
     stringComparator,
     type Comparator,
 } from './comparators';
 import FactionLink from './FactionLink';
-import type { EnrichedTreasure } from './gameData';
 import { SortingIndicator } from './SortingIndicator';
 import TreasureRow from './TreasureRow';
 import style from './TreasuresTable.module.css';
@@ -17,42 +16,30 @@ import { FACTION_SPECIFIC_COLUMNS } from './util';
 
 type Column = {
     readonly header: ReactNode;
-    readonly comparator: Comparator<EnrichedTreasure>;
+    readonly comparator: Comparator<Treasure>;
 };
-
-const NAME_COMPARATOR = stringComparator<EnrichedTreasure>(treasure => treasure.name);
-const DEFAULT_COMPARATOR = NAME_COMPARATOR;
 
 const COLUMNS: readonly Column[] = [
     {
         header: 'Treasure',
-        comparator: NAME_COMPARATOR,
+        comparator: stringComparator(treasure => treasure.name),
     },
     {
         header: 'Value',
         comparator: chainComparators(
             numberComparator(treasure => treasure.doubloonReward ?? 0),
-            chainComparators(
-                numberComparator(treasure => treasure.maxGoldReward ?? treasure.minGoldReward ?? 0),
-                DEFAULT_COMPARATOR,
-            ),
+            numberComparator(treasure => treasure.maxGoldReward ?? treasure.minGoldReward ?? 0),
         ),
     },
     {
         header: 'Buyers',
-        comparator: chainComparators(
-            stringArrayComparator(treasure =>
-                treasure.sellTo.filter(faction => !FACTION_SPECIFIC_COLUMNS.has(faction)),
-            ),
-            DEFAULT_COMPARATOR,
+        comparator: stringArrayComparator(treasure =>
+            treasure.sellTo.filter(faction => !FACTION_SPECIFIC_COLUMNS.has(faction)),
         ),
     },
-    ...Array.from(FACTION_SPECIFIC_COLUMNS, faction => ({
+    ...Array.from<string, Column>(FACTION_SPECIFIC_COLUMNS, faction => ({
         header: <FactionLink name={faction} />,
-        comparator: chainComparators(
-            booleanComparator(treasure => treasure.sellTo.includes(faction)),
-            DEFAULT_COMPARATOR,
-        ),
+        comparator: booleanComparator(treasure => treasure.sellTo.includes(faction)),
     })),
 ];
 
@@ -63,16 +50,17 @@ type Sorting =
       }
     | undefined;
 
-export default function TreasuresTable({ treasures }: { treasures: readonly EnrichedTreasure[] }): ReactNode {
+export default function TreasuresTable({ treasures }: { treasures: readonly Treasure[] }): ReactNode {
     const [sorting, setSorting] = useState<Sorting>();
-    let comparator = DEFAULT_COMPARATOR;
 
     if (sorting) {
-        comparator = COLUMNS[sorting.columnIndex].comparator;
+        const sortedTreasures = treasures.toSorted(COLUMNS[sorting.columnIndex].comparator);
 
         if (sorting.direction === 'desc') {
-            comparator = reverseComparator(comparator);
+            sortedTreasures.reverse();
         }
+
+        treasures = sortedTreasures;
     }
 
     function cycleSorting(columnIndex: number): void {
@@ -111,9 +99,7 @@ export default function TreasuresTable({ treasures }: { treasures: readonly Enri
             </thead>
             <tbody>
                 {treasures.length > 0 ? (
-                    treasures
-                        .toSorted(comparator)
-                        .map(treasure => <TreasureRow key={treasure.id} treasure={treasure} />)
+                    treasures.map(treasure => <TreasureRow key={treasure.name} treasure={treasure} />)
                 ) : (
                     <tr>
                         <td

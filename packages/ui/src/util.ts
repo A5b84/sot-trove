@@ -19,7 +19,3 @@ export function toIsoDateString(date: Date): string {
 function zeroPad(value: number, maxLength: number): string {
     return value.toString().padStart(maxLength, '0');
 }
-
-export function normalizeForSearch(value: string): string {
-    return value.toLocaleLowerCase().replaceAll("'", '').replaceAll('-', ' ');
-}

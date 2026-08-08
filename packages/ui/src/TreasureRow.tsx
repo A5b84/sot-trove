@@ -1,11 +1,11 @@
+import type { Treasure } from 'common';
 import { Fragment, memo, type ReactNode } from 'react';
 import CurrencyAmount from './CurrencyAmount';
 import FactionLink from './FactionLink';
-import type { EnrichedTreasure } from './gameData';
 import style from './TreasureRow.module.css';
 import { FACTION_SPECIFIC_COLUMNS } from './util';
 
-const TreasureRow = memo(function ({ treasure }: { treasure: EnrichedTreasure }): ReactNode {
+const TreasureRow = memo(function ({ treasure }: { treasure: Treasure }): ReactNode {
     return (
         <tr>
             <td>
