@@ -1,5 +1,5 @@
 {
-    "generatedOn": "2026-08-01T19:39:57.146Z",
+    "generatedOn": "2026-08-08T20:49:09.593Z",
     "treasures": [
         {
             "name": "Admiral's Chest",
@@ -16,7 +16,7 @@
             "name": "Adorned Receptacle",
             "url": "https://seaofthieves.wiki.gg/wiki/Adorned_Receptacle",
             "minGoldReward": 560,
-            "maxGoldReward": 1100,
+            "maxGoldReward": 1040,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -98,7 +98,7 @@
             "name": "Artifact of Legendary Hunger",
             "url": "https://seaofthieves.wiki.gg/wiki/Artifact_of_Legendary_Hunger",
             "minGoldReward": 2500,
-            "maxGoldReward": 2750,
+            "maxGoldReward": 2720,
             "sellTo": [
                 "Mysterious Stranger",
                 "Reaper's Bones",
@@ -131,7 +131,7 @@
             "name": "Ashen Captain's Chest",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Captain%27s_Chest",
             "minGoldReward": 1100,
-            "maxGoldReward": 2100,
+            "maxGoldReward": 2080,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -188,7 +188,7 @@
         {
             "name": "Ashen Chest",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Chest",
-            "doubloonReward": 5,
+            "minGoldReward": 520,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -240,7 +240,7 @@
             "name": "Ashen Disgraced Bounty Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Disgraced_Bounty_Skull",
             "minGoldReward": 350,
-            "maxGoldReward": 750,
+            "maxGoldReward": 702,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -251,7 +251,7 @@
             "name": "Ashen Foul Bounty Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Foul_Bounty_Skull",
             "minGoldReward": 180,
-            "maxGoldReward": 350,
+            "maxGoldReward": 351,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -262,7 +262,7 @@
             "name": "Ashen Hateful Bounty Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Hateful_Bounty_Skull",
             "minGoldReward": 750,
-            "maxGoldReward": 1450,
+            "maxGoldReward": 1404,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -272,8 +272,7 @@
         {
             "name": "Ashen Key",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Key",
-            "doubloonReward": 5,
-            "hasRewardNote": true,
+            "minGoldReward": 520,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -306,7 +305,7 @@
             "name": "Ashen Marauder's Chest",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Marauder%27s_Chest",
             "minGoldReward": 560,
-            "maxGoldReward": 1100,
+            "maxGoldReward": 1040,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -316,8 +315,7 @@
         {
             "name": "Ashen Reaper Disciple's Urn",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Reaper_Disciple%27s_Urn",
-            "minGoldReward": 4500,
-            "maxGoldReward": 5000,
+            "minGoldReward": 7900,
             "sellTo": [
                 "Reaper's Bones"
             ]
@@ -325,8 +323,7 @@
         {
             "name": "Ashen Reaper Follower's Urn",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Reaper_Follower%27s_Urn",
-            "minGoldReward": 4000,
-            "maxGoldReward": 4500,
+            "minGoldReward": 7225,
             "sellTo": [
                 "Reaper's Bones"
             ]
@@ -334,8 +331,7 @@
         {
             "name": "Ashen Reaper Master's Urn",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Reaper_Master%27s_Urn",
-            "minGoldReward": 5500,
-            "maxGoldReward": 6000,
+            "minGoldReward": 8850,
             "sellTo": [
                 "Reaper's Bones"
             ]
@@ -343,8 +339,7 @@
         {
             "name": "Ashen Reaper Servant's Urn",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Reaper_Servant%27s_Urn",
-            "minGoldReward": 5000,
-            "maxGoldReward": 5500,
+            "minGoldReward": 8575,
             "sellTo": [
                 "Reaper's Bones"
             ]
@@ -364,7 +359,7 @@
             "name": "Ashen Sea Master's Chest",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Sea_Master%27s_Chest",
             "minGoldReward": 1700,
-            "maxGoldReward": 1750,
+            "maxGoldReward": 1800,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -416,7 +411,7 @@
             "name": "Ashen Villainous Bounty Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Villainous_Bounty_Skull",
             "minGoldReward": 1450,
-            "maxGoldReward": 2800,
+            "maxGoldReward": 2808,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -448,7 +443,7 @@
             "name": "Ashes of the Damned",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashes_of_the_Damned",
             "minGoldReward": 1150,
-            "maxGoldReward": 1400,
+            "maxGoldReward": 1404,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -470,7 +465,7 @@
             "name": "Athena's Relic",
             "url": "https://seaofthieves.wiki.gg/wiki/Athena%27s_Relic",
             "minGoldReward": 3550,
-            "maxGoldReward": 3800,
+            "maxGoldReward": 3880,
             "sellTo": [
                 "Mysterious Stranger",
                 "Reaper's Bones",
@@ -500,7 +495,7 @@
         {
             "name": "Banished Ancient Rune Tablet",
             "url": "https://seaofthieves.wiki.gg/wiki/Banished_Ancient_Rune_Tablet",
-            "minGoldReward": 2500,
+            "minGoldReward": 2000,
             "sellTo": [
                 "Gold Hoarders",
                 "Merchant Alliance",
@@ -524,7 +519,7 @@
             "name": "Baron's Chest",
             "url": "https://seaofthieves.wiki.gg/wiki/Baron%27s_Chest",
             "minGoldReward": 2000,
-            "maxGoldReward": 2050,
+            "maxGoldReward": 2300,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -550,7 +545,9 @@
         {
             "name": "Bilge Rats Doubloon Crate",
             "url": "https://seaofthieves.wiki.gg/wiki/Bilge_Rats_Doubloon_Crate",
+            "minGoldReward": 18000,
             "doubloonReward": 200,
+            "hasRewardNote": true,
             "sellTo": [
                 "Smugglers' League"
             ]
@@ -558,15 +555,13 @@
         {
             "name": "Bilge Rats Party Fireworks Crate",
             "url": "https://seaofthieves.wiki.gg/wiki/Bilge_Rats_Party_Fireworks_Crate",
-            "sellTo": [
-                "Cannot be sold"
-            ]
+            "sellTo": []
         },
         {
             "name": "Black Coated Pig",
             "url": "https://seaofthieves.wiki.gg/wiki/Black_Coated_Pig",
             "minGoldReward": 70,
-            "maxGoldReward": 150,
+            "maxGoldReward": 94,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -577,7 +572,7 @@
             "name": "Black Plumed Chicken",
             "url": "https://seaofthieves.wiki.gg/wiki/Black_Plumed_Chicken",
             "minGoldReward": 70,
-            "maxGoldReward": 150,
+            "maxGoldReward": 94,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -588,7 +583,7 @@
             "name": "Black Scaled Snake",
             "url": "https://seaofthieves.wiki.gg/wiki/Black_Scaled_Snake",
             "minGoldReward": 70,
-            "maxGoldReward": 150,
+            "maxGoldReward": 94,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -599,7 +594,7 @@
             "name": "Blue Dappled Snake",
             "url": "https://seaofthieves.wiki.gg/wiki/Blue_Dappled_Snake",
             "minGoldReward": 30,
-            "maxGoldReward": 70,
+            "maxGoldReward": 47,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -796,7 +791,7 @@
             "name": "Captain Skull of the Damned",
             "url": "https://seaofthieves.wiki.gg/wiki/Captain_Skull_of_the_Damned",
             "minGoldReward": 1700,
-            "maxGoldReward": 2950,
+            "maxGoldReward": 3159,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -807,7 +802,7 @@
             "name": "Captain's Chest",
             "url": "https://seaofthieves.wiki.gg/wiki/Captain%27s_Chest",
             "minGoldReward": 560,
-            "maxGoldReward": 1100,
+            "maxGoldReward": 1040,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -905,7 +900,7 @@
             "name": "Chest of Ancient Tributes",
             "url": "https://seaofthieves.wiki.gg/wiki/Chest_of_Ancient_Tributes",
             "minGoldReward": 3000,
-            "maxGoldReward": 3400,
+            "maxGoldReward": 3900,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -934,7 +929,7 @@
             "name": "Chest of Boundless Sorrow",
             "url": "https://seaofthieves.wiki.gg/wiki/Chest_of_Boundless_Sorrow",
             "minGoldReward": 6000,
-            "maxGoldReward": 6800,
+            "maxGoldReward": 6880,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -991,7 +986,7 @@
             "name": "Chest of Rage",
             "url": "https://seaofthieves.wiki.gg/wiki/Chest_of_Rage",
             "minGoldReward": 3000,
-            "maxGoldReward": 3500,
+            "maxGoldReward": 3440,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -1015,7 +1010,7 @@
             "name": "Chest of Sorrow",
             "url": "https://seaofthieves.wiki.gg/wiki/Chest_of_Sorrow",
             "minGoldReward": 3000,
-            "maxGoldReward": 3500,
+            "maxGoldReward": 3440,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -1045,7 +1040,7 @@
             "name": "Coffer of Aged Grog",
             "url": "https://seaofthieves.wiki.gg/wiki/Coffer_of_Aged_Grog",
             "minGoldReward": 100,
-            "maxGoldReward": 200,
+            "maxGoldReward": 228,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1056,7 +1051,7 @@
             "name": "Coffer of Antiquated Coffee",
             "url": "https://seaofthieves.wiki.gg/wiki/Coffer_of_Antiquated_Coffee",
             "minGoldReward": 260,
-            "maxGoldReward": 470,
+            "maxGoldReward": 455,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1067,7 +1062,7 @@
             "name": "Coffer of Forgotten Jewels",
             "url": "https://seaofthieves.wiki.gg/wiki/Coffer_of_Forgotten_Jewels",
             "minGoldReward": 1100,
-            "maxGoldReward": 1900,
+            "maxGoldReward": 1855,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1078,7 +1073,7 @@
             "name": "Coffer of Timeworn Metals",
             "url": "https://seaofthieves.wiki.gg/wiki/Coffer_of_Timeworn_Metals",
             "minGoldReward": 500,
-            "maxGoldReward": 1000,
+            "maxGoldReward": 910,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1112,7 +1107,7 @@
             "name": "Coral Captain's Chest",
             "url": "https://seaofthieves.wiki.gg/wiki/Coral_Captain%27s_Chest",
             "minGoldReward": 980,
-            "maxGoldReward": 1925,
+            "maxGoldReward": 1820,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -1156,7 +1151,7 @@
             "name": "Coral Treasure Chest",
             "url": "https://seaofthieves.wiki.gg/wiki/Coral_Treasure_Chest",
             "minGoldReward": 375,
-            "maxGoldReward": 780,
+            "maxGoldReward": 910,
             "sellTo": [
                 "Gold Hoarders",
                 "Merchant Alliance",
@@ -1224,8 +1219,8 @@
             ]
         },
         {
-            "name": "Crate of Devil's Cloth",
-            "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Devil%27s_Cloth",
+            "name": "Crate of Devil's Cloths",
+            "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Devil%27s_Cloths",
             "minGoldReward": 200,
             "maxGoldReward": 1400,
             "sellTo": [
@@ -1277,7 +1272,7 @@
             "name": "Crate of Exotic Silks",
             "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Exotic_Silks",
             "minGoldReward": 500,
-            "maxGoldReward": 1000,
+            "maxGoldReward": 936,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1288,7 +1283,7 @@
             "name": "Crate of Exquisite Spices",
             "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Exquisite_Spices",
             "minGoldReward": 1100,
-            "maxGoldReward": 1900,
+            "maxGoldReward": 1872,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1299,7 +1294,7 @@
             "name": "Crate of Extraordinary Minerals",
             "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Extraordinary_Minerals",
             "minGoldReward": 1100,
-            "maxGoldReward": 1900,
+            "maxGoldReward": 1872,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1310,7 +1305,7 @@
             "name": "Crate of Fine Ore",
             "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Fine_Ore",
             "minGoldReward": 500,
-            "maxGoldReward": 1000,
+            "maxGoldReward": 936,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1321,7 +1316,7 @@
             "name": "Crate of Fine Sugar",
             "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Fine_Sugar",
             "minGoldReward": 100,
-            "maxGoldReward": 200,
+            "maxGoldReward": 234,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1395,7 +1390,7 @@
             "name": "Crate of Precious Gemstones",
             "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Precious_Gemstones",
             "minGoldReward": 2100,
-            "maxGoldReward": 3600,
+            "maxGoldReward": 3744,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1417,7 +1412,7 @@
             "name": "Crate of Rare Tea",
             "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Rare_Tea",
             "minGoldReward": 260,
-            "maxGoldReward": 470,
+            "maxGoldReward": 468,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1532,7 +1527,7 @@
             "name": "Crate of Volcanic Stone",
             "url": "https://seaofthieves.wiki.gg/wiki/Crate_of_Volcanic_Stone",
             "minGoldReward": 260,
-            "maxGoldReward": 470,
+            "maxGoldReward": 468,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1587,7 +1582,7 @@
             "name": "Devil's Remnant",
             "url": "https://seaofthieves.wiki.gg/wiki/Devil%27s_Remnant",
             "minGoldReward": 560,
-            "maxGoldReward": 1100,
+            "maxGoldReward": 1040,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -1598,7 +1593,7 @@
             "name": "Disgraced Bounty Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Disgraced_Bounty_Skull",
             "minGoldReward": 180,
-            "maxGoldReward": 350,
+            "maxGoldReward": 351,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -1609,7 +1604,7 @@
             "name": "Disgraced Coral Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Disgraced_Coral_Skull",
             "minGoldReward": 315,
-            "maxGoldReward": 613,
+            "maxGoldReward": 615,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -1631,7 +1626,7 @@
             "name": "Elegant Fishing Float Pack",
             "url": "https://seaofthieves.wiki.gg/wiki/Elegant_Fishing_Float_Pack",
             "minGoldReward": 265,
-            "maxGoldReward": 465,
+            "maxGoldReward": 470,
             "sellTo": [
                 "Reaper's Bones",
                 "Sovereigns",
@@ -1691,7 +1686,7 @@
             "name": "Enchantment Vessel",
             "url": "https://seaofthieves.wiki.gg/wiki/Enchantment_Vessel",
             "minGoldReward": 1948,
-            "maxGoldReward": 1959,
+            "maxGoldReward": 1960,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -1701,7 +1696,7 @@
         {
             "name": "Esteemed Merchant Manifest",
             "url": "https://seaofthieves.wiki.gg/wiki/Esteemed_Merchant_Manifest",
-            "minGoldReward": 2500,
+            "minGoldReward": 2200,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1795,6 +1790,15 @@
             ]
         },
         {
+            "name": "Flora of Distant Horizons",
+            "url": "https://seaofthieves.wiki.gg/wiki/Flora_of_Distant_Horizons",
+            "minGoldReward": 10000,
+            "sellTo": [
+                "Cargo Run Targets",
+                "Reaper's Bones"
+            ]
+        },
+        {
             "name": "Flora of Fortune",
             "url": "https://seaofthieves.wiki.gg/wiki/Flora_of_Fortune",
             "minGoldReward": 10000,
@@ -1821,7 +1825,7 @@
             "name": "Foul Bounty Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Foul_Bounty_Skull",
             "minGoldReward": 90,
-            "maxGoldReward": 180,
+            "maxGoldReward": 176,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -1832,7 +1836,7 @@
             "name": "Foul Coral Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Foul_Coral_Skull",
             "minGoldReward": 158,
-            "maxGoldReward": 315,
+            "maxGoldReward": 308,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -1853,7 +1857,7 @@
         {
             "name": "Generous Gift",
             "url": "https://seaofthieves.wiki.gg/wiki/Generous_Gift",
-            "doubloonReward": 10,
+            "minGoldReward": 5500,
             "sellTo": [
                 "Reaper's Bones"
             ]
@@ -1916,21 +1920,10 @@
             "sellTo": []
         },
         {
-            "name": "Gold Striped Pig",
-            "url": "https://seaofthieves.wiki.gg/wiki/Gold_Striped_Pig",
-            "minGoldReward": 150,
-            "maxGoldReward": 300,
-            "sellTo": [
-                "Merchant Alliance",
-                "Reaper's Bones",
-                "Sovereigns"
-            ]
-        },
-        {
             "name": "Gold Treasure Vault Keys",
             "url": "https://seaofthieves.wiki.gg/wiki/Gold_Treasure_Vault_Keys",
             "minGoldReward": 3600,
-            "maxGoldReward": 3750,
+            "maxGoldReward": 4050,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -1941,7 +1934,7 @@
             "name": "Golden Chicken",
             "url": "https://seaofthieves.wiki.gg/wiki/Golden_Chicken",
             "minGoldReward": 150,
-            "maxGoldReward": 300,
+            "maxGoldReward": 182,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -1974,7 +1967,18 @@
             "name": "Golden Snake",
             "url": "https://seaofthieves.wiki.gg/wiki/Golden_Snake",
             "minGoldReward": 150,
-            "maxGoldReward": 300,
+            "maxGoldReward": 182,
+            "sellTo": [
+                "Merchant Alliance",
+                "Reaper's Bones",
+                "Sovereigns"
+            ]
+        },
+        {
+            "name": "Golden Striped Pig",
+            "url": "https://seaofthieves.wiki.gg/wiki/Golden_Striped_Pig",
+            "minGoldReward": 150,
+            "maxGoldReward": 182,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -2062,7 +2066,7 @@
             "name": "Gunpowder Barrel",
             "url": "https://seaofthieves.wiki.gg/wiki/Gunpowder_Barrel",
             "minGoldReward": 100,
-            "maxGoldReward": 200,
+            "maxGoldReward": 187,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -2073,7 +2077,7 @@
             "name": "Hateful Bounty Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Hateful_Bounty_Skull",
             "minGoldReward": 350,
-            "maxGoldReward": 750,
+            "maxGoldReward": 702,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -2084,7 +2088,7 @@
             "name": "Hateful Coral Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Hateful_Coral_Skull",
             "minGoldReward": 613,
-            "maxGoldReward": 1313,
+            "maxGoldReward": 1229,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -2140,6 +2144,7 @@
         {
             "name": "Humble Gift",
             "url": "https://seaofthieves.wiki.gg/wiki/Humble_Gift",
+            "minGoldReward": 2750,
             "sellTo": [
                 "Reaper's Bones"
             ]
@@ -2171,9 +2176,9 @@
             "url": "https://seaofthieves.wiki.gg/wiki/Hunting_Tribute_of_the_Banished",
             "minGoldReward": 2500,
             "sellTo": [
-                "[[Hunter's Call]]",
-                "[[Servant of the Flame]]",
-                "[[Sovereigns]]"
+                "Reaper's Bones",
+                "Sovereigns",
+                "The Hunter's Call"
             ]
         },
         {
@@ -2202,7 +2207,7 @@
             "name": "Keg of Ancient Black Powder",
             "url": "https://seaofthieves.wiki.gg/wiki/Keg_of_Ancient_Black_Powder",
             "minGoldReward": 3000,
-            "maxGoldReward": 5000,
+            "maxGoldReward": 4780,
             "sellTo": [
                 "Mysterious Stranger",
                 "Reaper's Bones",
@@ -2239,7 +2244,7 @@
             "name": "Legendary Fortune Keeper",
             "url": "https://seaofthieves.wiki.gg/wiki/Legendary_Fortune_Keeper",
             "minGoldReward": 2500,
-            "maxGoldReward": 2750,
+            "maxGoldReward": 2720,
             "sellTo": [
                 "Mysterious Stranger",
                 "Reaper's Bones",
@@ -2250,7 +2255,7 @@
             "name": "Magma's Grail",
             "url": "https://seaofthieves.wiki.gg/wiki/Magma%27s_Grail",
             "minGoldReward": 1100,
-            "maxGoldReward": 2100,
+            "maxGoldReward": 2080,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -2353,7 +2358,7 @@
             "name": "Offering of Legendary Goods",
             "url": "https://seaofthieves.wiki.gg/wiki/Offering_of_Legendary_Goods",
             "minGoldReward": 2500,
-            "maxGoldReward": 2750,
+            "maxGoldReward": 2720,
             "sellTo": [
                 "Mysterious Stranger",
                 "Reaper's Bones",
@@ -2391,7 +2396,7 @@
             "name": "Opulent Curio",
             "url": "https://seaofthieves.wiki.gg/wiki/Opulent_Curio",
             "minGoldReward": 560,
-            "maxGoldReward": 1100,
+            "maxGoldReward": 1040,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -2440,7 +2445,7 @@
             "name": "Peculiar Coral Relic",
             "url": "https://seaofthieves.wiki.gg/wiki/Peculiar_Coral_Relic",
             "minGoldReward": 980,
-            "maxGoldReward": 1925,
+            "maxGoldReward": 1855,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -2451,7 +2456,7 @@
             "name": "Peculiar Relic",
             "url": "https://seaofthieves.wiki.gg/wiki/Peculiar_Relic",
             "minGoldReward": 560,
-            "maxGoldReward": 1100,
+            "maxGoldReward": 1040,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -2461,13 +2466,14 @@
         {
             "name": "Phantom Gunpowder Barrel",
             "url": "https://seaofthieves.wiki.gg/wiki/Phantom_Gunpowder_Barrel",
+            "minGoldReward": 0,
             "sellTo": []
         },
         {
             "name": "Pink and Black Spotted Pig",
             "url": "https://seaofthieves.wiki.gg/wiki/Pink_and_Black_Spotted_Pig",
             "minGoldReward": 30,
-            "maxGoldReward": 70,
+            "maxGoldReward": 47,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -2478,7 +2484,7 @@
             "name": "Pink Bristled Pig",
             "url": "https://seaofthieves.wiki.gg/wiki/Pink_Bristled_Pig",
             "minGoldReward": 10,
-            "maxGoldReward": 30,
+            "maxGoldReward": 23,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -2541,7 +2547,7 @@
             "name": "Pristine Megalodon Tooth",
             "url": "https://seaofthieves.wiki.gg/wiki/Pristine_Megalodon_Tooth",
             "minGoldReward": 1000,
-            "maxGoldReward": 1450,
+            "maxGoldReward": 1500,
             "sellTo": [
                 "Reaper's Bones",
                 "Sovereigns",
@@ -2605,7 +2611,7 @@
         {
             "name": "Prosperous Merchant Manifest",
             "url": "https://seaofthieves.wiki.gg/wiki/Prosperous_Merchant_Manifest",
-            "minGoldReward": 2000,
+            "minGoldReward": 1600,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -2631,6 +2637,8 @@
         {
             "name": "Reaper Disciple's Urn",
             "url": "https://seaofthieves.wiki.gg/wiki/Reaper_Disciple%27s_Urn",
+            "minGoldReward": 4500,
+            "maxGoldReward": 5000,
             "sellTo": [
                 "Reaper's Bones"
             ]
@@ -2638,6 +2646,8 @@
         {
             "name": "Reaper Follower's Urn",
             "url": "https://seaofthieves.wiki.gg/wiki/Reaper_Follower%27s_Urn",
+            "minGoldReward": 4000,
+            "maxGoldReward": 4500,
             "sellTo": [
                 "Reaper's Bones"
             ]
@@ -2654,6 +2664,8 @@
         {
             "name": "Reaper Servant's Urn",
             "url": "https://seaofthieves.wiki.gg/wiki/Reaper_Servant%27s_Urn",
+            "minGoldReward": 5000,
+            "maxGoldReward": 5500,
             "sellTo": [
                 "Reaper's Bones"
             ]
@@ -2685,7 +2697,7 @@
             "name": "Red Speckled Chicken",
             "url": "https://seaofthieves.wiki.gg/wiki/Red_Speckled_Chicken",
             "minGoldReward": 30,
-            "maxGoldReward": 70,
+            "maxGoldReward": 47,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -2696,7 +2708,7 @@
             "name": "Red Striped Snake",
             "url": "https://seaofthieves.wiki.gg/wiki/Red_Striped_Snake",
             "minGoldReward": 10,
-            "maxGoldReward": 30,
+            "maxGoldReward": 23,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -2816,14 +2828,14 @@
             "url": "https://seaofthieves.wiki.gg/wiki/Sanctuary_of_the_Banished_Key",
             "minGoldReward": 2325,
             "sellTo": [
-                "[[Gold Hoarders]]",
-                "[[Hunter's Call]]",
-                "[[Merchant Alliance]]",
-                "[[Mysterious Stranger]]",
-                "[[Order of Souls]]",
-                "[[Servant of the Flame]]",
-                "[[Smugglers' League]]",
-                "[[Sovereigns]]"
+                "Gold Hoarders",
+                "Merchant Alliance",
+                "Mysterious Stranger",
+                "Order of Souls",
+                "Reaper's Bones",
+                "Smugglers' League",
+                "Sovereigns",
+                "The Hunter's Call"
             ]
         },
         {
@@ -2998,7 +3010,7 @@
             "name": "Skeleton Captain's Chest",
             "url": "https://seaofthieves.wiki.gg/wiki/Skeleton_Captain%27s_Chest",
             "minGoldReward": 1150,
-            "maxGoldReward": 1550,
+            "maxGoldReward": 1560,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -3009,7 +3021,7 @@
             "name": "Skeleton Captain's Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Skeleton_Captain%27s_Skull",
             "minGoldReward": 850,
-            "maxGoldReward": 2200,
+            "maxGoldReward": 2106,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -3031,7 +3043,7 @@
             "name": "Skull of Athena's Blessing",
             "url": "https://seaofthieves.wiki.gg/wiki/Skull_of_Athena%27s_Blessing",
             "minGoldReward": 3550,
-            "maxGoldReward": 3850,
+            "maxGoldReward": 3880,
             "sellTo": [
                 "Mysterious Stranger",
                 "Reaper's Bones",
@@ -3074,7 +3086,7 @@
             "name": "Skull of the Damned",
             "url": "https://seaofthieves.wiki.gg/wiki/Skull_of_the_Damned",
             "minGoldReward": 1050,
-            "maxGoldReward": 1250,
+            "maxGoldReward": 1253,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -3094,7 +3106,7 @@
             "name": "Stone Treasure Vault Keys",
             "url": "https://seaofthieves.wiki.gg/wiki/Stone_Treasure_Vault_Keys",
             "minGoldReward": 1200,
-            "maxGoldReward": 1400,
+            "maxGoldReward": 1550,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -3132,7 +3144,7 @@
             "name": "Stronghold Chest",
             "url": "https://seaofthieves.wiki.gg/wiki/Stronghold_Chest",
             "minGoldReward": 1500,
-            "maxGoldReward": 3000,
+            "maxGoldReward": 3120,
             "sellTo": [
                 "Gold Hoarders",
                 "Reaper's Bones",
@@ -3143,7 +3155,7 @@
             "name": "Stronghold Gunpowder Barrel",
             "url": "https://seaofthieves.wiki.gg/wiki/Stronghold_Gunpowder_Barrel",
             "minGoldReward": 2750,
-            "maxGoldReward": 6000,
+            "maxGoldReward": 5622,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
@@ -3154,7 +3166,7 @@
             "name": "Stronghold Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Stronghold_Skull",
             "minGoldReward": 1800,
-            "maxGoldReward": 4200,
+            "maxGoldReward": 4212,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -3201,6 +3213,7 @@
         {
             "name": "Tome of Curses I",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Curses_I",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3210,6 +3223,7 @@
         {
             "name": "Tome of Curses II",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Curses_II",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3219,6 +3233,7 @@
         {
             "name": "Tome of Curses III",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Curses_III",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3228,6 +3243,7 @@
         {
             "name": "Tome of Curses IV",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Curses_IV",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3237,6 +3253,7 @@
         {
             "name": "Tome of Curses V",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Curses_V",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3246,6 +3263,7 @@
         {
             "name": "Tome of Fire I",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Fire_I",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3255,6 +3273,7 @@
         {
             "name": "Tome of Fire II",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Fire_II",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3264,6 +3283,7 @@
         {
             "name": "Tome of Fire III",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Fire_III",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3273,6 +3293,7 @@
         {
             "name": "Tome of Fire IV",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Fire_IV",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3282,6 +3303,7 @@
         {
             "name": "Tome of Fire V",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Fire_V",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3291,6 +3313,7 @@
         {
             "name": "Tome of Power I",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Power_I",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3300,6 +3323,7 @@
         {
             "name": "Tome of Power II",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Power_II",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3309,6 +3333,7 @@
         {
             "name": "Tome of Power III",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Power_III",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3318,6 +3343,7 @@
         {
             "name": "Tome of Power IV",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Power_IV",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3327,6 +3353,7 @@
         {
             "name": "Tome of Power V",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Power_V",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3336,6 +3363,7 @@
         {
             "name": "Tome of Resurrection I",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Resurrection_I",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3345,6 +3373,7 @@
         {
             "name": "Tome of Resurrection II",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Resurrection_II",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3354,6 +3383,7 @@
         {
             "name": "Tome of Resurrection III",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Resurrection_III",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3363,6 +3393,7 @@
         {
             "name": "Tome of Resurrection IV",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Resurrection_IV",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3372,6 +3403,7 @@
         {
             "name": "Tome of Resurrection V",
             "url": "https://seaofthieves.wiki.gg/wiki/Tome_of_Resurrection_V",
+            "minGoldReward": 5500,
             "sellTo": [
                 "Bilge Rats",
                 "Reaper's Bones",
@@ -3548,7 +3580,7 @@
             "name": "Villainous Bounty Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Villainous_Bounty_Skull",
             "minGoldReward": 750,
-            "maxGoldReward": 1450,
+            "maxGoldReward": 1404,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -3559,7 +3591,7 @@
             "name": "Villainous Coral Skull",
             "url": "https://seaofthieves.wiki.gg/wiki/Villainous_Coral_Skull",
             "minGoldReward": 1313,
-            "maxGoldReward": 2538,
+            "maxGoldReward": 2457,
             "sellTo": [
                 "Order of Souls",
                 "Reaper's Bones",
@@ -3592,7 +3624,7 @@
             "name": "White Feathered Chicken",
             "url": "https://seaofthieves.wiki.gg/wiki/White_Feathered_Chicken",
             "minGoldReward": 10,
-            "maxGoldReward": 30,
+            "maxGoldReward": 23,
             "sellTo": [
                 "Merchant Alliance",
                 "Reaper's Bones",
