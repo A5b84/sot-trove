@@ -7,9 +7,15 @@
     font-weight: bold;
 }
 
+.column {
+    display: inline-flex;
+    flex-direction: column;
+}
+
 .note {
     padding-inline-start: 0.25ch;
     color: var(--text-subtle);
     text-decoration: underline;
     text-decoration-style: dotted;
+    vertical-align: center;
 }

@@ -25,11 +25,11 @@ export default function CurrencyAmount({
     }
 
     return (
-        <>
+        <span>
             {formatNumber(minAmount)}
             {isAmountToShow(maxAmount) && <>–{formatNumber(maxAmount)}</>}
             <InlineIcon src={ICON_BY_CURRENCY[currency]} iconId={currency} spaceBefore />
-        </>
+        </span>
     );
 }
 
