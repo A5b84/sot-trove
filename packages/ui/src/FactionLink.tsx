@@ -24,10 +24,10 @@ const ICON_CHAR_BY_FACTION: Readonly<Record<string, string>> = {
 
 export default function FactionLink({ name }: { name: string }): ReactNode {
     return (
-        <>
+        <a href={guessWikiLink(name)} target='_blank'>
             {getIcon(name)}
-            <a href={guessWikiLink(name)}>{name}</a>
-        </>
+            {name}
+        </a>
     );
 }
 

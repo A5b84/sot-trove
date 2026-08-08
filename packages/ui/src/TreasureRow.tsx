@@ -1,5 +1,5 @@
 import { FACTIONS } from 'common';
-import { memo, type ReactNode } from 'react';
+import { Fragment, memo, type ReactNode } from 'react';
 import CurrencyAmount from './CurrencyAmount';
 import FactionLink from './FactionLink';
 import type { EnrichedTreasure } from './gameData';
@@ -9,7 +9,9 @@ const TreasureRow = memo(function ({ treasure }: { treasure: EnrichedTreasure })
     return (
         <tr>
             <td>
-                <a href={treasure.url}>{treasure.name}</a>
+                <a href={treasure.url} target='_blank'>
+                    {treasure.name}
+                </a>
             </td>
             <td className={style['number-cell']}>
                 <div className={style['column']}>
@@ -30,7 +32,12 @@ const TreasureRow = memo(function ({ treasure }: { treasure: EnrichedTreasure })
                 {treasure.sellTo.map(
                     buyer =>
                         buyer !== FACTIONS.SOVEREIGNS &&
-                        buyer !== FACTIONS.REAPERS_BONES && [<FactionLink name={buyer} />, <br />],
+                        buyer !== FACTIONS.REAPERS_BONES && (
+                            <Fragment key={buyer}>
+                                <FactionLink name={buyer} />
+                                <br />
+                            </Fragment>
+                        ),
                 )}
             </td>
             <td className={style['checkmark-cell']}>{treasure.sellTo.includes(FACTIONS.SOVEREIGNS) && '✓'}</td>
