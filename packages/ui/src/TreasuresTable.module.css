@@ -1,0 +1,9 @@
+.treasures-table {
+    margin-block: 2em;
+    margin-inline: auto;
+
+    & th {
+        cursor: pointer;
+        user-select: none; /* Clicking fast to cycle through sorting directions can cause text to get selected */
+    }
+}

@@ -1,9 +1,9 @@
-import { FACTIONS } from 'common';
 import { Fragment, memo, type ReactNode } from 'react';
 import CurrencyAmount from './CurrencyAmount';
 import FactionLink from './FactionLink';
 import type { EnrichedTreasure } from './gameData';
 import style from './TreasureRow.module.css';
+import { FACTION_SPECIFIC_COLUMNS } from './util';
 
 const TreasureRow = memo(function ({ treasure }: { treasure: EnrichedTreasure }): ReactNode {
     return (
@@ -30,18 +30,20 @@ const TreasureRow = memo(function ({ treasure }: { treasure: EnrichedTreasure })
             </td>
             <td>
                 {treasure.sellTo.map(
-                    buyer =>
-                        buyer !== FACTIONS.SOVEREIGNS &&
-                        buyer !== FACTIONS.REAPERS_BONES && (
-                            <Fragment key={buyer}>
-                                <FactionLink name={buyer} />
+                    faction =>
+                        !FACTION_SPECIFIC_COLUMNS.has(faction) && (
+                            <Fragment key={faction}>
+                                <FactionLink name={faction} />
                                 <br />
                             </Fragment>
                         ),
                 )}
             </td>
-            <td className={style['checkmark-cell']}>{treasure.sellTo.includes(FACTIONS.SOVEREIGNS) && '✓'}</td>
-            <td className={style['checkmark-cell']}>{treasure.sellTo.includes(FACTIONS.REAPERS_BONES) && '✓'}</td>
+            {Array.from(FACTION_SPECIFIC_COLUMNS, (faction, index) => (
+                <td key={index} className={style['checkmark-cell']}>
+                    {treasure.sellTo.includes(faction) && '✓'}
+                </td>
+            ))}
         </tr>
     );
 });

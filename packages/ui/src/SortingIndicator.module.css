@@ -1,0 +1,8 @@
+.sorting-indicator {
+    width: 0.55em;
+    margin-inline-start: 0.25em;
+
+    & path {
+        fill: currentColor;
+    }
+}
