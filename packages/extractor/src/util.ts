@@ -6,13 +6,14 @@ export async function checkResponseOk(response: Response): Promise<void> {
     if (!response.ok) {
         const body = await response.text();
         throw new Error(
-            `Failed to fetch ${response.url}: ${response.status} ${response.statusText}\n` + 'Response body:\n' + body
+            `Failed to fetch ${response.url}: ${response.status} ${response.statusText}\n` + 'Response body:\n' + body,
         );
     }
 }
 
 export function normalizeFactionName(name: string): string {
-    name = name.trim();
+    name = name.trim().replaceAll('[', '').replaceAll(']', '');
+
     switch (name) {
         case 'Larinna':
             return FACTIONS.BILGE_RATS;

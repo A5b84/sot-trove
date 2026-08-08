@@ -83,9 +83,17 @@ function extractTreasureFromTemplate(node: WikiTemplateNode, page: Page): Treasu
                 maxGoldReward = parseIntParameter(parameter);
                 break;
 
-            case 'reward-d':
-                doubloonReward = parseIntParameter(parameter);
+            case 'reward-d': {
+                let value = stringifyNodes(parameter.value);
+
+                if (/^or\b/.test(value)) {
+                    value = value.slice('or'.length);
+                    hasRewardNote = true;
+                }
+
+                doubloonReward = parseIntParameter(value);
                 break;
+            }
 
             case 'reward-seearticle':
                 if (parseBooleanParameter(parameter)) {
@@ -116,17 +124,19 @@ function extractTreasureFromTemplate(node: WikiTemplateNode, page: Page): Treasu
     };
 }
 
-function parseIntParameter(node: WikiTemplateNodeParameter): number | undefined {
-    const stringified = stringifyNodes(node.value);
+function parseIntParameter(value: WikiTemplateNodeParameter | string): number | undefined {
+    if (typeof value !== 'string') {
+        value = stringifyNodes(value.value);
+    }
 
-    if (!stringified) {
+    if (!value) {
         return undefined;
     }
 
-    const result = parseIntValue(stringified);
+    const result = parseIntValue(value);
 
     if (isNaN(result)) {
-        console.warn('Could not parse int from node', node);
+        console.warn('Could not parse int from node', value);
         return undefined;
     }
 
@@ -157,7 +167,7 @@ function stringifyNode(node: WikiNode): string {
         case 'template':
             return node.name;
         default: {
-            const _exhaustivenessCheck: never = node;
+            node satisfies never;
             throw new Error(`Unknown node type for node ${node}`);
         }
     }

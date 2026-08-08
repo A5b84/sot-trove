@@ -7,7 +7,7 @@ const CACHE_DIRECTORY = resolve('cache');
 
 export async function getOrComputeCachedValue<T>(fileName: string, compute: () => Promise<T>): Promise<T> {
     const path = join(CACHE_DIRECTORY, fileName);
-    const logPrefix = `[Cache/${fileName}]`;
+    const logPrefix = `[cache/${fileName}]`;
 
     if (REFRESH_CACHE) {
         console.log(`${logPrefix} ${REFRESH_CACHE_FLAG} is present, data will be recreated`);
