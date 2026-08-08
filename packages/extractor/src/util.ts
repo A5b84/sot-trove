@@ -11,7 +11,7 @@ export async function checkResponseOk(response: Response): Promise<void> {
     }
 }
 
-export function normalizeFactionName(name: string): string {
+export function normalizeFactionName(name: string): string | undefined {
     name = name.trim().replaceAll('[', '').replaceAll(']', '');
 
     switch (name) {
@@ -38,6 +38,8 @@ export function normalizeFactionName(name: string): string {
             return FACTIONS.SMUGGLERS_LEAGUE;
         case 'Sovereigns':
             return FACTIONS.SOVEREIGNS;
+        case 'Cannot be sold':
+            return undefined;
         default:
             return name;
     }

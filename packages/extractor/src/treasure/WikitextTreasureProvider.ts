@@ -102,7 +102,10 @@ function extractTreasureFromTemplate(node: WikiTemplateNode, page: Page): Treasu
                 break;
 
             case 'sellto':
-                sellTo = stringifyNodes(parameter.value).split(',').map(normalizeFactionName);
+                sellTo = stringifyNodes(parameter.value)
+                    .split(',')
+                    .map(normalizeFactionName)
+                    .filter(faction => faction !== undefined);
                 sellTo = Array.from(new Set(sellTo));
                 sellTo.sort();
                 break;
