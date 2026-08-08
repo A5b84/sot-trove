@@ -2,12 +2,11 @@ import type { GameData, Treasure } from 'common';
 import gameDataJson from './gameData.json';
 import { normalizeForSearch } from './util';
 
-export type EnrichedTreasure = Treasure &
-    Readonly<{
-        id: number;
-        normalizedName: string;
-        sellToNormalizedForSearch: readonly string[];
-    }>;
+export type EnrichedTreasure = Treasure & {
+    readonly id: number;
+    readonly normalizedName: string;
+    readonly sellToNormalizedForSearch: readonly string[];
+};
 
 export type EnrichedGameData = Omit<GameData, 'treasures'> & {
     readonly treasures: readonly EnrichedTreasure[];

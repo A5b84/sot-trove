@@ -1,17 +1,17 @@
-export type GameData = Readonly<{
-    generatedOn: Date | string; // String when deserialized from JSON
-    treasures: readonly Treasure[];
-}>;
+export type GameData = {
+    readonly generatedOn: Date | string; // String when deserialized from JSON
+    readonly treasures: readonly Treasure[];
+};
 
-export type Treasure = Readonly<{
-    name: string;
-    url: string;
-    minGoldReward?: number;
-    maxGoldReward?: number;
-    doubloonReward?: number;
-    hasRewardNote?: true;
-    sellTo: readonly string[];
-}>;
+export type Treasure = {
+    readonly name: string;
+    readonly url: string;
+    readonly minGoldReward?: number;
+    readonly maxGoldReward?: number;
+    readonly doubloonReward?: number;
+    readonly hasRewardNote?: true;
+    readonly sellTo: readonly string[];
+};
 
 export const FACTIONS = {
     // Values should be titles of the corresponding wiki pages

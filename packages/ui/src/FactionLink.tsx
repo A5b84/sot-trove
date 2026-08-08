@@ -8,19 +8,19 @@ import reapersBonesIcon from '/reapers-bones.svg';
 import smugglersLeagueIcon from '/smugglers-league.svg';
 import sovereignsIcon from '/sovereigns.svg';
 
-const ICON_LINK_BY_FACTION: Readonly<Record<string, string>> = {
-    [FACTIONS.GOLD_HOARDERS]: goldHoardersIcon,
-    [FACTIONS.MERCHANT_ALLIANCE]: merchantAllianceIcon,
-    [FACTIONS.ORDER_OF_SOULS]: orderOfSoulsIcon,
-    [FACTIONS.REAPERS_BONES]: reapersBonesIcon,
-    [FACTIONS.SMUGGLERS_LEAGUE]: smugglersLeagueIcon,
-    [FACTIONS.SOVEREIGNS]: sovereignsIcon,
-};
+const ICON_LINK_BY_FACTION: ReadonlyMap<string, string> = new Map([
+    [FACTIONS.GOLD_HOARDERS, goldHoardersIcon],
+    [FACTIONS.MERCHANT_ALLIANCE, merchantAllianceIcon],
+    [FACTIONS.ORDER_OF_SOULS, orderOfSoulsIcon],
+    [FACTIONS.REAPERS_BONES, reapersBonesIcon],
+    [FACTIONS.SMUGGLERS_LEAGUE, smugglersLeagueIcon],
+    [FACTIONS.SOVEREIGNS, sovereignsIcon],
+]);
 
-const ICON_CHAR_BY_FACTION: Readonly<Record<string, string>> = {
-    [FACTIONS.BILGE_RATS]: '🐀',
-    [FACTIONS.HUNTERS_CALL]: '🐟',
-};
+const ICON_CHAR_BY_FACTION: ReadonlyMap<string, string> = new Map([
+    [FACTIONS.BILGE_RATS, '🐀'],
+    [FACTIONS.HUNTERS_CALL, '🐟'],
+]);
 
 export default function FactionLink({ name }: { name: string }): ReactNode {
     return (
@@ -32,12 +32,12 @@ export default function FactionLink({ name }: { name: string }): ReactNode {
 }
 
 function getIcon(factionName: string): ReactNode {
-    const iconLink = ICON_LINK_BY_FACTION[factionName] as string | undefined;
+    const iconLink = ICON_LINK_BY_FACTION.get(factionName);
     if (iconLink) {
         return <InlineIcon src={iconLink} iconId={factionName} spaceAfter />;
     }
 
-    const textIcon = ICON_CHAR_BY_FACTION[factionName] as string | undefined;
+    const textIcon = ICON_CHAR_BY_FACTION.get(factionName);
     if (textIcon) {
         return textIcon + ' ';
     }
