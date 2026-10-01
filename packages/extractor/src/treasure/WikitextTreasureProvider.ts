@@ -19,7 +19,7 @@ const TRUE_VALUES: ReadonlySet<string> = new Set(['y', 'yes', 'true', '1']);
  */
 export class WikitextTreasureProvider implements ITreasureProvider {
     async getTreasures(): Promise<Treasure[]> {
-        const pages = await getOrComputeCachedValue('pages.json', () => fetchAllCategoryMembers('Treasure'));
+        const pages = await getOrComputeCachedValue('pages.json', () => fetchAllCategoryMembers('Treasure items'));
         const treasures: Treasure[] = [];
 
         for (const page of pages) {
