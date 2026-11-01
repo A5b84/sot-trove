@@ -1,5 +1,5 @@
 {
-    "generatedOn": "2026-10-01T22:47:35.698Z",
+    "generatedOn": "2026-11-01T22:13:06.812Z",
     "treasures": [
         {
             "name": "Admiral's Chest",
@@ -2983,7 +2983,9 @@
         {
             "name": "Secret Shipment Crate",
             "url": "https://seaofthieves.wiki.gg/wiki/Secret_Shipment_Crate",
+            "minGoldReward": 10000,
             "doubloonReward": 25,
+            "hasRewardNote": true,
             "sellTo": [
                 "Smugglers' League"
             ]
