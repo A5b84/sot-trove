@@ -1,5 +1,5 @@
 {
-    "generatedOn": "2026-11-01T22:13:06.812Z",
+    "generatedOn": "2026-11-05T21:02:39.828Z",
     "treasures": [
         {
             "name": "Admiral's Chest",
@@ -137,7 +137,7 @@
         {
             "name": "Ashen Captain's Chest",
             "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Captain%27s_Chest",
-            "minGoldReward": 1100,
+            "minGoldReward": 1120,
             "maxGoldReward": 2080,
             "sellTo": [
                 "Gold Hoarders",
@@ -390,6 +390,20 @@
             "minGoldReward": 16875,
             "sellTo": [
                 "Reaper's Bones"
+            ]
+        },
+        {
+            "name": "Ashen Treasure Chest",
+            "url": "https://seaofthieves.wiki.gg/wiki/Ashen_Treasure_Chest",
+            "minGoldReward": 375,
+            "maxGoldReward": 910,
+            "sellTo": [
+                "Gold Hoarders",
+                "Merchant Alliance",
+                "Order of Souls",
+                "Reaper's Bones",
+                "Sovereigns",
+                "The Hunter's Call"
             ]
         },
         {
@@ -892,7 +906,7 @@
         {
             "name": "Castaway's Chest",
             "url": "https://seaofthieves.wiki.gg/wiki/Castaway%27s_Chest",
-            "minGoldReward": 60,
+            "minGoldReward": 70,
             "maxGoldReward": 130,
             "sellTo": [
                 "Gold Hoarders",
@@ -1044,7 +1058,7 @@
         {
             "name": "Chest of Sorrow",
             "url": "https://seaofthieves.wiki.gg/wiki/Chest_of_Sorrow",
-            "minGoldReward": 3000,
+            "minGoldReward": 3040,
             "maxGoldReward": 3440,
             "sellTo": [
                 "Gold Hoarders",
@@ -1660,7 +1674,7 @@
         {
             "name": "Elegant Fishing Float Pack",
             "url": "https://seaofthieves.wiki.gg/wiki/Elegant_Fishing_Float_Pack",
-            "minGoldReward": 265,
+            "minGoldReward": 260,
             "maxGoldReward": 470,
             "sellTo": [
                 "Reaper's Bones",
@@ -3464,6 +3478,20 @@
             "minGoldReward": 250,
             "maxGoldReward": 520,
             "sellTo": []
+        },
+        {
+            "name": "Treasure Chest of the Damned",
+            "url": "https://seaofthieves.wiki.gg/wiki/Treasure_Chest_of_the_Damned",
+            "minGoldReward": 375,
+            "maxGoldReward": 910,
+            "sellTo": [
+                "Gold Hoarders",
+                "Merchant Alliance",
+                "Order of Souls",
+                "Reaper's Bones",
+                "Sovereigns",
+                "The Hunter's Call"
+            ]
         },
         {
             "name": "Treasured Blossom Ancientscale",
