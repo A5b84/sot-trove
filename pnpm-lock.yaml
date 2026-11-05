@@ -7,13 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      fuse.js:
-        specifier: ^7.5.0
-        version: 7.5.0
-      use-debounce:
-        specifier: ^10.1.1
-        version: 10.1.1(react@19.2.0)
     devDependencies:
       '@eslint/js':
         specifier: ^9.38.0
@@ -70,12 +63,18 @@ importers:
       common:
         specifier: workspace:*
         version: link:../common
+      fuse.js:
+        specifier: ^7.5.0
+        version: 7.5.0
       react:
         specifier: ^19.2.0
         version: 19.2.0
       react-dom:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
+      use-debounce:
+        specifier: ^10.1.1
+        version: 10.1.1(react@19.2.0)
     devDependencies:
       '@types/node':
         specifier: ^24.8.1
@@ -813,6 +812,7 @@ packages:
   eslint@9.39.1:
     resolution: {integrity: sha512-BhHmn2yNOFA9H9JmmIVKJmd288g9hrVRDkdoIgRCRuSySRUHH7r/DI6aAXW9T1WwUuY3DFgrcaqB+deURBLR5g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
